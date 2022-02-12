@@ -9,7 +9,7 @@ you can check my previous [reactjs repo](https://github.com/helloakn/reactjs-fro
 ### Install modules(package)
 `npm install`
 after installation you can start run the application
-### Runn the application
+### Run the application
 `nmp run dev`
 after app stared, you can visit to [localhost:3000](http://localhost:3000)
 
