@@ -1,0 +1,210 @@
+.mainContainer{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  background: #262628;
+}
+
+.mainHeaderContainer{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:flex-start;
+  width: 100%;
+  height:100px;
+  position:fixed;
+}
+/* Start Small Menu */
+  .menuSmallContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-start;
+    width: 100%;
+    height:30%;
+    background-color:#788EBA;
+  }
+  .menuInnerContainerSmallLeft{
+    width:30%;
+    height:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    
+  }
+
+  .menuInnerContainerSmallLeft a{
+    color:#ffffff;
+    font-family:"Eczar";
+    font-size:12px;
+    text-decoration:none;
+
+  }
+  .menuInnerContainerSmallLeft a:hover{
+    color:#000000;
+  }
+  .menuInnerContainerSmallRight{
+    width:15%;
+  }
+/* END Small Menu */
+/* Start Big Menu */
+  .menuBigContainer{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-start;
+    width: 100%;
+    height:65%;;
+    background-color:rgba(38, 38, 40, 0.58);
+  }
+    .menuInnerContainerBigLeft{
+      width:30%;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      align-items:flex-start;
+      
+    }
+    .MenuLogoLink{
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      justify-content:flex-start;
+      text-decoration: none;
+    }
+    .logo-img{
+      object-fit: contain;
+      position: relative !important;
+      width: unset !important;
+      height:70% !important;
+      background-color:green;
+    }
+    .menuInnerContainerBigRight{
+      width:40%;
+      height:100%;
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+      align-items:center;
+      
+    }
+
+    .menuInnerContainer{
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+      align-items:flex-start;
+      width: 80%;
+      height:100%;
+    }
+  
+/* END Big Menu */
+
+.menuLine{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:flex-start;
+  width: 100%;
+  height: 5%;
+  background: linear-gradient(90deg, #788EBA 0%, #000000 100%);
+}
+
+/* Start Body */
+
+   
+.mainBodyContainer{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  margin-top:100px;
+  min-height:100vh;
+  justify-content:space-around;
+  background-color:#2A2A32;
+}
+
+  .bodyInnerContainer{
+    width: 80%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-start;
+    
+  }
+    .bodyInnerContainerLeft{
+      width:30%;
+      height:100%;
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .bodyInnerContainerRight{
+      width:15%;
+    }
+/* End Body */
+/* Start Footer */
+.mainFooterContainer{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  background: #262628;
+  justify-content:center;
+  align-items:center;
+}
+.mainFooterInnerContainer{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  width: 80%;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.mainFooterInnerContainer div{
+  color:"#ffffff";
+  font-family:"Darker Grotesque";
+}
+
+
+
+.footerColumn{
+  width:30%;
+  display:flex;
+  flex-direction:column;
+  margin-bottom:20px;
+  justify-content: center;
+  align-items:center;
+}
+.footerCaption{
+ 
+  margin-top:20px;
+  color:#788EBA;
+  font-family:"Dancing Script" !important;
+  font-size:30px;
+}
+.footerIcon{
+  font-size: 20px; color: rgb(120, 142, 186);
+  color:#788EBA;
+}
+.footerLabel{
+  color:#FFFFFF;
+  fontSize:20px;
+  font-family:"Darker Grotesque";
+  margin-left:10px;
+
+}
+.footerParagraph{
+ color:#ffffff;
+ width:100%;
+}
+.footerRow{
+  width:100%;
+  margin-top:5px;
+ }
+ .footerRow i{
+  width:10%;
+ }
