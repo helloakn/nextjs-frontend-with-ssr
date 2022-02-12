@@ -1,4 +1,4 @@
-# react js frontend and api integration.
+# Next.js frontend + SSR and api integration.
 
 This project is for my aungkyawnyunt.com. you can study next.js for frontend by walking through in this repo.  
 previous version i used reactjs for my frontend, i updated with next.js for better performance and SEO.  
