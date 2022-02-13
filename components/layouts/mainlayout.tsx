@@ -78,11 +78,20 @@ export default function MainLayout({ children, ...props }) {
             </div>
             
             {/* END Header */ }
+
+
+
+              {/* START Content */ }
             <div className={styles.mainBodyContainer}>
                 <div className={styles.bodyInnerContainer}>
-                    {children}s
+                    {children}
                 </div>
             </div>
+            {/* END Content */ }
+
+
+
+
             {/* Start Footer */ }
             <div className={styles.mainFooterContainer}>
                 <div className={styles.mainFooterInnerContainer}>

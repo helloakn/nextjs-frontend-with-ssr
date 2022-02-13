@@ -1,4 +1,6 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+
+
 
 import MainLayout from '../../components/layouts/mainlayout'
 import Header from '../../components/header';
@@ -11,6 +13,12 @@ const Home: NextPage = () => {
 
       
     <div>hello babe</div>
+    <div>hello babe</div>
+    <div>hello babe</div>
+    <div>hello babe</div>
+    <div>hello babe</div>
+    <div>hello babe</div>
+    
     </MainLayout>
   )
 }

@@ -121,17 +121,17 @@
   display:flex;
   flex-direction:row;
   margin-top:100px;
-  min-height:100vh;
   justify-content:space-around;
   background-color:#2A2A32;
 }
 
   .bodyInnerContainer{
-    width: 80%;
+    width: 100%;
     display:flex;
-    flex-direction:row;
-    justify-content:space-between;
+    flex-direction:column;
+    justify-content:flex-start;
     align-items:flex-start;
+    margin-top:10px;
     
   }
     .bodyInnerContainerLeft{
@@ -151,7 +151,7 @@
   width:100%;
   display:flex;
   flex-direction:row;
-  background: #262628;
+  background: #2A2A32;
   justify-content:center;
   align-items:center;
 }
@@ -172,7 +172,7 @@
 
 
 .footerColumn{
-  width:30%;
+  width:20%;
   display:flex;
   flex-direction:column;
   margin-bottom:20px;
