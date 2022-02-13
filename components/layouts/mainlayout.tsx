@@ -14,70 +14,78 @@ export default function MainLayout({ children, ...props }) {
             <Header title={props.title} />
         }
       {/* Begin Body */ }
-        <div className={styles.mainContainer}>
-            {/* Begin Header */ }
-            <div className={styles.mainHeaderContainer}>
-                {/* Start Small Menu */ }
-                <div className={styles.menuSmallContainer}>
-                    <div className={styles.menuInnerContainer}>
-                        <div className={styles.menuInnerContainerSmallLeft}>
-                            <Link href="https://github.com/helloakn">
-                                <a>GitHub</a>
-                            </Link>
-                            <Link href="https://www.upwork.com/freelancers/~014bcfc74386c7a188">
-                                <a>UpWork</a>
-                            </Link>
-                            <Link href="https://www.linkedin.com/in/aung-kyaw-nyunt-02755313a">
-                            <a>Linkedin</a>
-                            </Link>
-                            <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                            <a>Facebook</a>
-                            </Link>
-                        </div>
-                        <div className={styles.menuInnerContainerSmallRight}>
-                        
-                        </div>
-                    </div>
-                </div>
-                {/* END Small Menu */ }
-                {/* Start Big Menu */ }
-                <div className={styles.menuBigContainer}>
-                    <div className={styles.menuInnerContainer}>
-                        <div className={styles.menuInnerContainerBigLeft}>
-                            <Link href="home" >
-                                <a className={styles.MenuLogoLink}>
-                                    
-                                    <img src="media/logo.svg" height="70%" />
-                                    <label>aungkyawnyunt.com</label>
-                                </a>
-                            </Link>
-                        </div>
-                        <div className={styles.menuInnerContainerBigRight}>
-                            <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                            <a>Home</a>
-                            </Link>
-                            <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                            <a>AWS</a>
-                            </Link>
-                            <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                            <a>DevOps</a>
-                            </Link>
-                            <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                            <a>Programming</a>
-                            </Link>
-                            <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                            <a>Others</a>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
+        <div className={styles.mainViewPort}>
+            
+
+
+
+
+{/* Start Header */ }
+    <div className={styles.mainHeaderContainer}>
                 
-                {/* End Big Menu */ }
-                <div className={styles.menuLine}>
+        {/* Start Small Menu */ }
+        <div className={styles.menuSmallContainer}>
+                    <div className={styles.menuInnerContainer}>
+                                    <div className={styles.menuInnerContainerSmallLeft}>
+                                        <Link href="https://github.com/helloakn">
+                                            <a>GitHub</a>
+                                        </Link>
+                                        <Link href="https://www.upwork.com/freelancers/~014bcfc74386c7a188">
+                                            <a>UpWork</a>
+                                        </Link>
+                                        <Link href="https://www.linkedin.com/in/aung-kyaw-nyunt-02755313a">
+                                        <a>Linkedin</a>
+                                        </Link>
+                                        <Link href="https://www.facebook.com/mr.aungkyawnyunt">
+                                        <a>Facebook</a>
+                                        </Link>
+                                    </div>
+                                    <div className={styles.menuInnerContainerSmallRight}>
+                                    
+                                    </div>
+                    </div>
+        </div>
+        {/* END Small Menu */ }
+
+        {/* Start Big Menu */ }
+        <div className={styles.menuBigContainer}>
+            <div className={styles.menuInnerContainer}>
+                <div className={styles.menuInnerContainerBigLeft}>
+                    <Link href="/home" >
+                        <a className={styles.MenuLogoLink}>
+                            
+                            <img src="media/logo.svg" height="70%" />
+                            <label>aungkyawnyunt.com</label>
+                        </a>
+                    </Link>
+                </div>
+                <div className={styles.menuInnerContainerBigRight}>
+                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
+                    <a>Home</a>
+                    </Link>
+                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
+                    <a>AWS</a>
+                    </Link>
+                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
+                    <a>DevOps</a>
+                    </Link>
+                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
+                    <a>Programming</a>
+                    </Link>
+                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
+                    <a>Others</a>
+                    </Link>
                 </div>
             </div>
-            
-            {/* END Header */ }
+        </div>
+
+        {/* End Big Menu */ }
+
+        <div className={styles.menuLine}>
+        </div>
+    </div>
+
+{/* END Header */ }
 
 
 
@@ -95,27 +103,51 @@ export default function MainLayout({ children, ...props }) {
             {/* Start Footer */ }
             <div className={styles.mainFooterContainer}>
                 <div className={styles.mainFooterInnerContainer}>
+                   
                     <div className={styles.footerColumn}>
-                        <div>
+                       
                             <Link href="https://www.aungkyawnyunt.com">
                                         <a>https://www.aungkyawnyunt.com</a>
                             </Link> <br/>
                             &#169; All right Reserved. Inspired Codes...
+                        
+                    </div>
+
+                    <div className={styles.footerColumn}>
+                        <div className={styles.footerCaption}>Channel</div>
+                        <div className={styles.footerParagraph}>
+                            <div className={styles.footerRow}>
+                                <Link href="https://www.linkedin.com/in/aung-kyaw-nyunt-02755313a">
+                                    <a>Youtube</a>
+                                </Link>
+                            </div>
+                            <div className={styles.footerRow}>
+                               
+                                <Link href="https://www.linkedin.com/in/aung-kyaw-nyunt-02755313a">
+                                    <a>Facebook</a>
+                                </Link>
+                            </div>
+                            <div className={styles.footerRow}>
+                                <Link href="https://www.linkedin.com/in/aung-kyaw-nyunt-02755313a">
+                                    <a>GitHub</a>
+                                </Link>
+                            </div>
                         </div>
                     </div>
+
                     <div className={styles.footerColumn}>
                         <div className={styles.footerCaption}>Get In Touch</div>
                         <div className={styles.footerParagraph}>
                             <div className={styles.footerRow}>
-                                <i class="fas fa-mobile-alt"></i>
+                                <i className="fas fa-mobile-alt"></i>
                                 <label className={styles.footerLabel}>+95 9763764572</label>
                             </div>
                             <div className={styles.footerRow}>
-                                <i class="fas fa-mail-bulk"></i>
+                                <i className="fas fa-mail-bulk"></i>
                                 <label className={styles.footerLabel}>aungkyawnyunt2004@gmail.com</label>
                             </div>
                             <div className={styles.footerRow}>
-                                <i class="fas fa-dice-d20"></i>
+                                <i className="fas fa-dice-d20"></i>
                                 <label className={styles.footerLabel}>
                                    
                                   
@@ -129,6 +161,7 @@ export default function MainLayout({ children, ...props }) {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             {/* END Footer */ }

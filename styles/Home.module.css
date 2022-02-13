@@ -9,6 +9,7 @@
 
 }
 
+
 /* Start Banner */
 .bannerContainer{
   display:flex;
@@ -35,6 +36,43 @@
   justify-content:flex-start;
   align-items:flex-end;
 }
+
+@media only screen and (max-width: 600px) {
+  .bannerContainer{
+    display:flex;
+    flex-direction:column;
+    background-image:url("/media/akn.png");
+    background-position:fixed;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+  .bannerContainerLeft{
+    width:100%;
+    font-size:20px;
+
+    
+  }
+  .bannerContainerRight{
+    width:100%;
+    display:none;
+
+  }
+
+  .banerGreeting{
+    font-size:20px !important;
+    margin-top:150px;
+    color:#ffffff !important;
+  }
+  .banerPosition{
+    font-size:20px !important;
+  }
+
+  .divLatestArticlesContentContainer{
+    display:flex;
+    flex-direction:column !important;
+  }
+}
+
 .imgAkn{
   margin-left:0;
   height:90%;
@@ -48,7 +86,6 @@
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  background-color: red;
 }
 .bannerRowRight{
   
@@ -94,7 +131,7 @@
   height:100%;
   display:flex;
   flex-direction:column;
-  justify-content:flex-start;
+  justify-content:center;
   align-items:flex-start;
   color:#788EBA;
 }
@@ -109,7 +146,7 @@
 
 
 .bannerDivButtons{
-  margin-top:20px;
+  margin-top:40px;
   margin-bottom:10px;
   display:flex;
   flex-direction:row;
@@ -166,7 +203,7 @@
   width:100%; 
 
   color:#788EBA;
-  font-family:"Dancing Script";
+  font-family:"Cuprum";
   font-size:30px;
 
   padding-top:20px;
@@ -206,4 +243,58 @@
   color:#ffffff;
   font-family:"Darker Grotesque";
   font-size:16px;
+}
+
+/* END Banner AboutMe*/
+
+.divMainLatestArticles{
+  display:flex;
+  flex-direction:row;
+  justify-content:center; 
+  align-items:flex-start;
+  width:100%;
+
+  background-color:#2A2A32;
+}
+.divInnerLatestArticles{
+  display:flex;
+  flex-direction:column;
+  justify-content:center; 
+  align-items:flex-start;
+  width:80%;
+}
+.divTitleLatestArticles{
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start; 
+  align-items:flex-start;
+  width:100%;
+
+  color:#788EBA;
+  font-family:"Cuprum";
+  font-size:30px;
+  margin-top:20px;
+}
+.divLatestArticlesContentContainer{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between; 
+  align-items:flex-start;
+  width:100%;
+
+  color:#ffffff;
+  font-family:"Darker Grotesque";
+  font-size:16px;
+  margin-top:30px;
+}
+.StatementUL{
+  
+  margin: 0; padding: 0;
+  margin-left:10px;
+  font-family:"Darker Grotesque";
+  font-size:16px;
+}
+.StatementUL li{
+  margin-left:0px;
+  margin-top:10px;
 }
