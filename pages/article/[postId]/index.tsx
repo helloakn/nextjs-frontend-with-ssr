@@ -176,6 +176,7 @@ const Article: NextPage = (jsonResult) => {
         </div>  
 
         <div className={styles.ArticleDetailBodyInnerRight}>
+        <h3 className={styles.hCaption}>Here is you may also like.</h3>
           {relatedArticles}
         </div>
       </div>

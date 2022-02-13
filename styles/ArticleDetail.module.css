@@ -191,17 +191,18 @@
 }
 @media only screen and (max-width: 600px) {
     .ArticleDetailBodyInner{
-        width:80%;
+        width:100%;
     
         display:flex;
         flex-direction:column;
         justify-content:flex-start;
-        align-items:flex-start;  
+        align-items:center;  
         margin-top:5px;  
     }
     .ArticleDetailBodyInnerLeft{
-        width:100%;
+        width:80%;
         background-color:#3A3D46;
+        margin-bottom:10px;
     }
     .ArticleDetailBodyInnerRight{
         width:100%;
@@ -210,5 +211,6 @@
         flex-direction:column;
         justify-content:center !important;
         align-items:center !important;
+        margin-top:10px;
     }
 }
