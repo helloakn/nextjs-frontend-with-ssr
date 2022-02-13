@@ -1,0 +1,205 @@
+/* start header */
+.ArticleDetailHeader{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.ArticleDetailHeaderInner{
+    width:80%;
+    margin-top:20px;
+    margin-bottom:20px;
+
+    display:flex;
+    flex-direction: row;
+}
+
+.ArticleDetailHeaderInnerLeft{
+    width:60%;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+}
+.ArticleDetailImage{
+    width:100%;
+}
+.ArticleDetailHeaderInnerRight{
+    width:40%;
+
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.ArticleDetailHeaderInnerRightTitle{
+    width:80%;
+
+    font-family: "Cuprum";
+    font-size: 30px;
+    color: #788EBA;
+}
+.ArticleDetailHeaderInnerRightCategory{
+    width:80%;
+    margin-top:30px;
+
+    display:flex;
+    flex-direction:row;
+}
+.ArticleDetailHeaderInnerRightAuthor{
+    width:80%;
+    margin-top:30px;
+
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+.ArticleDetailHeaderInnerRightAuthorImage{
+    width:30%;
+}
+.ArticleDetailHeaderInnerRightAuthorDetail{
+    width:70%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    height:100%;
+    margin-left:5px;
+}
+.ArticleDetailHeaderInnerRightAuthorDetail label{
+    
+    width:100%;
+    font-family: "Cuprum";
+    font-size: 16px;
+    color: #788EBA;
+    
+}
+.AuthorImage{
+    border-radius:10px;
+    width:100%;
+}
+/* end header */
+
+@media only screen and (max-width: 600px) {
+    .ArticleDetailHeaderInner{
+        width:80%;
+        margin-top:20px;
+        margin-bottom:20px;
+    
+        display:flex;
+        flex-direction: column;
+    }
+    
+    .ArticleDetailHeaderInnerLeft{
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items:center;
+    }
+    .ArticleDetailHeaderInnerRight{
+        width:100%;
+        margin-top:10px;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    .ArticleDetailHeaderInnerRightTitle{
+        width:100%;
+    }
+    .ArticleDetailHeaderInnerRightCategory{
+        width:100%;
+    }
+    .ArticleDetailHeaderInnerRightAuthor{
+        width:100%;
+    }
+    .ArticleDetailHeaderInnerRightAuthorDetail{
+        margin-left:5px;
+    }
+    .ArticleDetailHeaderInnerRightAuthorDetail label{
+        font-size:12px;
+    }
+}
+/* end header responsive */
+
+.ArticleDetailBody{
+    width:100%;
+    background-color:#3A3D46;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.ArticleDetailBodyInner{
+    width:80%;
+
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:flex-start;  
+    margin-top:5px;  
+}
+.ArticleDetailBodyInnerLeft{
+    width:70%;
+    background-color:#3A3D46;
+}
+.ArticleDetailBodyInnerRight{
+    width:30%;
+    background-color:#43454D;
+}
+.ArticleIntro{
+
+}
+.ArticleDescription{
+
+}
+.ArticleDetailContent{
+    color:#ffffff;
+    font-family:"Darker Grotesque";
+    font-size:20px;
+}
+.hCaption{
+    font-family:"Cuprum";
+    font-size:20px;
+    color:#788EBA !important;
+}
+.DivCodeContainer{
+
+}
+.DivCode{
+    display:flex;
+    flex-direction:row;
+    background-color:#EAEBF0;
+    font-family:"ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace";
+    font-size:14px;
+    font-weight:bold;
+    color:#24292f;
+    padding:10px;
+    width:90% !important;
+    border-radius:5px;
+}
+@media only screen and (max-width: 600px) {
+    .ArticleDetailBodyInner{
+        width:80%;
+    
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:flex-start;  
+        margin-top:5px;  
+    }
+    .ArticleDetailBodyInnerLeft{
+        width:100%;
+        background-color:#3A3D46;
+    }
+    .ArticleDetailBodyInnerRight{
+        width:100%;
+        background-color:#43454D;
+    }
+}

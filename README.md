@@ -14,6 +14,7 @@ after installation you can start run the application
 after app stared, you can visit to [localhost:3000](http://localhost:3000)
 
 ## Additional Modules
-
+[react-gist](https://www.npmjs.com/package/react-gist)  
+to descripte code snippets on web page. especially i use it on article page.
 ## Code Flow
 ![alt text](https://github.com/helloakn/reactjs-frontend/blob/master/images/codelayout.png?raw=true)
