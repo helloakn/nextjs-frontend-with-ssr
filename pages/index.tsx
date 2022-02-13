@@ -27,17 +27,17 @@ function Home({ data }) {
 
   let articleData = chunkArray(responseJson.latestArticles,3);
 
-        let datas = articleData.map((element,index)=>{
-            return (
-                <div className={styles.divLatestArticlesContentContainer} key={"divLatestArticlesContentContainer"+index}>
-                    {
-                        element.map((elm,i)=>{
-                            return (<Article  item={elm} key={"listiemsmall"+i} />)
-                        })
-                    }
-                </div>
-                );
-        });
+  let datas = articleData.map((element,index)=>{
+      return (
+          <div className={styles.divLatestArticlesContentContainer} key={"divLatestArticlesContentContainer"+index}>
+              {
+                  element.map((elm,i)=>{
+                      return (<Article  item={elm} key={"listiemsmall"+i} />)
+                  })
+              }
+          </div>
+          );
+  });
 
   return (
     <MainLayout title="haha"

@@ -6,7 +6,7 @@ import Gist from "react-gist";
 
 import MainLayout from '../../../components/layouts/mainlayout'
 import Header from '../../../components/header';
-
+import RelatedArticle from '../../../components/items/relatedArticle';
 import styles from '../../../styles/ArticleDetail.module.css';
 
 const NEXT_PUBLIC_ImageDomain = process.env.NEXT_PUBLIC_ImageDomain;
@@ -89,6 +89,7 @@ const Article: NextPage = (jsonResult) => {
   // console.log('jsonResult');
    let article = jsonResult.data.article;
    let articleDetail = jsonResult.data.articleDetail;
+   let latestArticles = jsonResult.data.latestArticles;
   //  console.log(articleDetail);
 
    let categories = article.categories.map((element,index)=>{
@@ -103,6 +104,13 @@ const Article: NextPage = (jsonResult) => {
         </Link>
         );
     });
+
+    let relatedArticles = latestArticles.map((element,index)=>{
+      return (
+            <RelatedArticle  item={element} key={"listiemsmall"+index} />
+          );
+  });
+
     let articleDetails = articleDetail.map((element,i)=>{
       // type => 1 for image, 2 for code, 3 for text, 4 for movie.	
       return (
@@ -168,7 +176,7 @@ const Article: NextPage = (jsonResult) => {
         </div>  
 
         <div className={styles.ArticleDetailBodyInnerRight}>
-          right
+          {relatedArticles}
         </div>
       </div>
     </div>

@@ -152,6 +152,11 @@
 .ArticleDetailBodyInnerRight{
     width:30%;
     background-color:#43454D;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center !important;
+    align-items:center !important;
 }
 .ArticleIntro{
 
@@ -201,5 +206,9 @@
     .ArticleDetailBodyInnerRight{
         width:100%;
         background-color:#43454D;
+        display:flex;
+        flex-direction:column;
+        justify-content:center !important;
+        align-items:center !important;
     }
 }
