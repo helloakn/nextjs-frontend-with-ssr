@@ -44,7 +44,7 @@ function Home({ data }) {
 
   return (
     <MainLayout title="haha"
-        head={<Header title="hello world" />}
+        head={<Header title="Aung Kyaw Nyunt" />}
     >
         {/* Start Banner */}
         <div className={styles.mainContainer}>
