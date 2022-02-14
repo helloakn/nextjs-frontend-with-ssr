@@ -11,11 +11,12 @@ import styles from '../../../styles/CategoryArticle.module.css';
 
 const NEXT_PUBLIC_ImageDomain = process.env.NEXT_PUBLIC_ImageDomain;
 const NEXT_PUBLIC_AppDomain = process.env.NEXT_PUBLIC_AppDomain;
+const NEXT_PUBLIC_ApiDomain = process.env.NEXT_PUBLIC_ApiDomain;
 
 export async function getServerSideProps(context) {
   // Fetch data from external API
   let _categoryId = context.params.categoryId;
-  let _url = 'http://localhost:8000/www/getcategorydetail/'+_categoryId;
+  let _url = NEXT_PUBLIC_ApiDomain+'www/getcategorydetail/'+_categoryId;
   const res = await fetch(_url)
   const jsonResult = await res.json()
   const data = jsonResult.data;
@@ -25,11 +26,11 @@ export async function getServerSideProps(context) {
 }
 
 const Category: NextPage = (jsonResult) => {
-  //const router = useRouter()
-  //const { postId } = router.query
-  console.log('jsonResult');
-  console.log(jsonResult.data);
-  console.log('jsonResult');
+  const router = useRouter()
+  const { categoryId } = router.query
+  // console.log('jsonResult');
+  // console.log(jsonResult.data);
+  // console.log('jsonResult');
   let categoryDetail = jsonResult.data.categoryDetail;
   let articles = jsonResult.data.articles;
   //  console.log(articleDetail);
@@ -44,7 +45,14 @@ const Category: NextPage = (jsonResult) => {
 
   return (
     <MainLayout title="haha"
-        head={<Header title={categoryDetail.name} />}
+        head={
+        <Header 
+          title={categoryDetail.name+" Tutorial"}
+          description={categoryDetail.description}
+          image={NEXT_PUBLIC_ImageDomain+categoryDetail.image}
+          url={NEXT_PUBLIC_AppDomain+"category/"+categoryId}
+        />
+      }
     >
     {/* Start Header */}
     <div className={styles.CategoryDetailHeader}>

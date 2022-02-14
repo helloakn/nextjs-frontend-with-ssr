@@ -11,10 +11,11 @@ import styles from '../../../styles/ArticleDetail.module.css';
 
 const NEXT_PUBLIC_ImageDomain = process.env.NEXT_PUBLIC_ImageDomain;
 const NEXT_PUBLIC_AppDomain = process.env.NEXT_PUBLIC_AppDomain;
+const NEXT_PUBLIC_ApiDomain = process.env.NEXT_PUBLIC_ApiDomain;
 export async function getServerSideProps(context) {
   // Fetch data from external API
   let _postId = context.params.postId;
-  let _url = 'http://localhost:8000/www/getarticledetail/'+_postId;
+  let _url = NEXT_PUBLIC_ApiDomain+'www/getarticledetail/'+_postId;
   const res = await fetch(_url)
   const jsonResult = await res.json()
   const data = jsonResult.data;
@@ -120,7 +121,14 @@ const Article: NextPage = (jsonResult) => {
 
   return (
     <MainLayout title="haha"
-        head={<Header title={article.title} />}
+        head={
+        <Header 
+          title={article.title}
+          description={article.description}
+          image={NEXT_PUBLIC_ImageDomain+article.image}
+          url={NEXT_PUBLIC_AppDomain+"article/"+postId}
+        />
+      }
     >
     {/* Start Header */}
     <div className={styles.ArticleDetailHeader}>

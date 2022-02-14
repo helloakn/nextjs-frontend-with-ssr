@@ -9,9 +9,12 @@ import styles from '../styles/Home.module.css';
 
 import {chunkArray} from '../classes/chunkarray';
 
+const NEXT_PUBLIC_ApiDomain = process.env.NEXT_PUBLIC_ApiDomain;
+
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`http://localhost:8000/www/gethomedata/`)
+  let _url = NEXT_PUBLIC_ApiDomain + "www/gethomedata/";
+  const res = await fetch(_url)
   const data = await res.json()
   console.log(data)
   // Pass data to the page via props
@@ -21,9 +24,9 @@ export async function getServerSideProps() {
 //const Home: NextPage = () => {
 function Home({ data }) {
   let responseJson = data.data;
-  console.log('slient side');
-  console.log(responseJson.latestArticles);
-  console.log('end client side');
+  // console.log('slient side');
+  // console.log(responseJson.latestArticles);
+  // console.log('end client side');
 
   let articleData = chunkArray(responseJson.latestArticles,3);
 

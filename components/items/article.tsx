@@ -3,9 +3,6 @@ import Link from 'next/link'
 //import { DefaultColor,IMAGE_Domain,APP_DOMAIN } from "../config";
 let DefaultColor = "#788EBA";
 let IMAGE_Domain = process.env.NEXT_PUBLIC_ImageDomain;
-console.log(`IMAGE_Domain`);
-console.log(IMAGE_Domain);
-console.log(`IMAGE_Domain`);
 let APP_DOMAIN = process.env.NEXT_PUBLIC_AppDomain;
 
 export default function Article({...props }) {
@@ -22,11 +19,11 @@ export default function Article({...props }) {
     let categories = item.categories.map((element,index)=>{
         return (index===0?
             <Link key={"abuttoncategory"+element.id} href={APP_DOMAIN+"category/"+element.name.toLowerCase()}>
-            <a className="componentArticleAbutton"   >{element.name}</a>
+                <a className="componentArticleAbutton"   >{element.name}</a>
             </Link>
             :
             <Link key={"abuttoncategory"+element.id} href={APP_DOMAIN+"category/"+element.name.toLowerCase()}>
-            <a className="componentArticleAbutton marginLeft5px"  >{element.name}</a>
+                <a className="componentArticleAbutton marginLeft5px"  >{element.name}</a>
             </Link>
             );
       });

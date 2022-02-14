@@ -5,6 +5,8 @@ import Image from 'next/image'
 
 import Header from '../header';
 
+let APP_DOMAIN = process.env.NEXT_PUBLIC_AppDomain;
+
 export default function MainLayout({ children, ...props }) {
     return (
     <>
@@ -60,21 +62,22 @@ export default function MainLayout({ children, ...props }) {
                     </Link>
                 </div>
                 <div className={styles.menuInnerContainerBigRight}>
-                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                    <a>Home</a>
+                    <Link href={APP_DOMAIN}>
+                        <a>Home</a>
                     </Link>
-                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                    <a>AWS</a>
+                    <Link href="/category/aws">
+                        <a>AWS</a>
                     </Link>
-                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                    <a>DevOps</a>
+                    <Link href="/category/devops">
+                        <a>DevOps</a>
                     </Link>
-                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                    <a>Programming</a>
+                    <Link href="/category/docker">
+                        <a>Docker</a>
                     </Link>
-                    <Link href="https://www.facebook.com/mr.aungkyawnyunt">
-                    <a>Others</a>
+                    <Link href="/category/programming">
+                        <a>Programming</a>
                     </Link>
+                    
                 </div>
             </div>
         </div>
