@@ -5,6 +5,12 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
+
+    background-image:url("/media/bg2.png");
+    background-position:fixed;
+    background-size: contain;
+    background-attachment: fixed !important;
+
 }
 
 .ArticleDetailHeaderInner{
@@ -159,7 +165,7 @@
     align-items:center !important;
 }
 .ArticleIntro{
-
+margin-top:20px;
 }
 .ArticleDescription{
 

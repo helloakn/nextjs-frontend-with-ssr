@@ -1,0 +1,62 @@
+/* start header */
+.CategoryDetailHeader{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background-image:url("/media/bg2.png");
+    background-position:fixed;
+    background-size: contain;
+    background-attachment: fixed !important;
+
+}
+
+.CategoryeDetailHeaderInner{
+    width:80%;
+    margin-top:20px;
+    margin-bottom:20px;
+
+    display:flex;
+    flex-direction: column;
+}
+.CategoryTitle{
+    width:100%;
+
+    color: rgb(120, 142, 186);
+    font-size: 30px;
+    font-family: "Dancing Script";
+
+}
+.CategoryDescription{
+    width:100%;
+
+    color: rgb(120, 142, 186);
+    margin-top: 5px;
+    font-size: 25px;
+    font-family: "Darker Grotesque";
+
+}
+/* end header */
+
+.CategoryBody{
+    width:100%;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.CategoryBodyInner{
+    width:80%;
+    display:flex;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+@media only screen and (max-width: 600px) {
+    
+}
+/* end header responsive */

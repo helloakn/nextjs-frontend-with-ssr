@@ -31,7 +31,7 @@ export default function Article({...props }) {
             );
       });
     return (
-        <div className="componentArticleContainer">
+        <div className={"componentArticleContainer " + (props.css?props.css:"")}>
             <div className="componentArticleImageContainer">
             <img alt="media" src={IMAGE_Domain+item.image} width="100%"/>
             </div>
