@@ -6,6 +6,7 @@ import Gist from "react-gist";
 
 import MainLayout from '../../../components/layouts/mainlayout'
 import Header from '../../../components/header';
+import NotFound from '../../../components/items/notfound';
 import RelatedArticle from '../../../components/items/relatedArticle';
 import styles from '../../../styles/ArticleDetail.module.css';
 
@@ -92,7 +93,20 @@ const Article: NextPage = (jsonResult) => {
    let articleDetail = jsonResult.data.articleDetail;
    let latestArticles = jsonResult.data.latestArticles;
   //  console.log(articleDetail);
-
+    if(jsonResult.code!=200){
+      return (
+        <MainLayout title="haha"
+        head={
+            <Header 
+              title="Article Not Found"
+              
+            />
+          }
+        >
+          <NotFound message="Article Not Found." />
+        </MainLayout>
+      )
+    }
    let categories = article.categories.map((element,index)=>{
      console.log(NEXT_PUBLIC_AppDomain);
     return (index===0?

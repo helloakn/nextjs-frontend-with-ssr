@@ -6,6 +6,7 @@ import Gist from "react-gist";
 
 import MainLayout from '../../../components/layouts/mainlayout'
 import Header from '../../../components/header';
+import NotFound from '../../../components/items/notfound';
 import Article from '../../../components/items/article';
 import styles from '../../../styles/CategoryArticle.module.css';
 
@@ -31,6 +32,22 @@ const Category: NextPage = (jsonResult) => {
   // console.log('jsonResult');
   // console.log(jsonResult.data);
   // console.log('jsonResult');
+
+  if(jsonResult.code!=200){
+    return (
+      <MainLayout title="haha"
+      head={
+          <Header 
+            title="Article Not Found"
+            
+          />
+        }
+      >
+        <NotFound message="Category Not Found" />
+      </MainLayout>
+    )
+  }
+
   let categoryDetail = jsonResult.data.categoryDetail;
   let articles = jsonResult.data.articles;
   //  console.log(articleDetail);

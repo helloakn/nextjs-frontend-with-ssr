@@ -180,6 +180,27 @@ a {
 }
 /* End Component Article*/
 
+
+.componentNotFoundContainer{
+  width:100%;
+  min-height:70vh;
+  background-color:#2A2A32;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+.componentNotFoundContainerInner{
+  width:80%;
+  height:100%;
+  background-color:#2A2A32;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  
+}
 .marginLeft5px{
   margin-left:5px;
 }
@@ -193,3 +214,4 @@ a {
 .marginBottom10px{
   margin-bottom:10px;
 }
+
