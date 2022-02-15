@@ -6,8 +6,10 @@
 //   NEXT_PUBLIC_ImageDomain:  process.env.NEXT_PUBLIC_ImageDomain
 // }
 module.exports = {
-  noImplicitAny:false,
-  reactStrictMode: true,
+  compilerOptions: {
+   noImplicitReturns: true,
+   noImplicitAny: false,
+  },
   serverRuntimeConfig: {
     // Will only be available on the server side
     NEXT_PUBLIC_AppDomain:    process.env.NEXT_PUBLIC_AppDomain,
