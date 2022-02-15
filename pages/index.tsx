@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
+import getConfig from 'next/config'
+const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
 
 import MainLayout from '../components/layouts/mainlayout'
 import Header from '../components/header';
@@ -9,14 +11,13 @@ import styles from '../styles/Home.module.css';
 
 import {chunkArray} from '../classes/chunkarray';
 
-const NEXT_PUBLIC_ApiDomain = process.env.NEXT_PUBLIC_ApiDomain;
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  let _url = NEXT_PUBLIC_ApiDomain + "www/gethomedata/";
+  let _url = serverRuntimeConfig.NEXT_PUBLIC_ApiDomain + "www/gethomedata/";
   const res = await fetch(_url)
   const data = await res.json()
-  console.log(data)
+ // console.log(data)
   // Pass data to the page via props
   return { props: { data } }
 }

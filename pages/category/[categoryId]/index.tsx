@@ -2,6 +2,8 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Script from 'next/script'
+import getConfig from 'next/config'
+const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
 import Gist from "react-gist";
 
 import MainLayout from '../../../components/layouts/mainlayout'
@@ -10,30 +12,32 @@ import NotFound from '../../../components/items/notfound';
 import Article from '../../../components/items/article';
 import styles from '../../../styles/CategoryArticle.module.css';
 
-const NEXT_PUBLIC_ImageDomain = process.env.NEXT_PUBLIC_ImageDomain;
-const NEXT_PUBLIC_AppDomain = process.env.NEXT_PUBLIC_AppDomain;
-const NEXT_PUBLIC_ApiDomain = process.env.NEXT_PUBLIC_ApiDomain;
+const NEXT_PUBLIC_ImageDomain = publicRuntimeConfig.NEXT_PUBLIC_ImageDomain;
+const NEXT_PUBLIC_AppDomain = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
 export async function getServerSideProps(context) {
   // Fetch data from external API
   let _categoryId = context.params.categoryId;
-  let _url = NEXT_PUBLIC_ApiDomain+'www/getcategorydetail/'+_categoryId;
+  let _url = serverRuntimeConfig.NEXT_PUBLIC_ApiDomain+'www/getcategorydetail/'+_categoryId;
   const res = await fetch(_url)
   const jsonResult = await res.json()
-  const data = jsonResult.data;
+  //const outPout = jsonResult;
   //console.log(data)
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { jsonResult } }
 }
 
-const Category: NextPage = (jsonResult) => {
+const Category: NextPage = (output) => {
   const router = useRouter()
   const { categoryId } = router.query
   // console.log('jsonResult');
-  // console.log(jsonResult.data);
+  // console.log(output.jsonResult);
   // console.log('jsonResult');
-
-  if(jsonResult.code!=200){
+  let jsonResult = output.jsonResult;
+  // console.log('code');
+  // console.log(jsonResult.code);
+  // console.log('code');
+  if(jsonResult.code!==200){
     return (
       <MainLayout title="haha"
       head={

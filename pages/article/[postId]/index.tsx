@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Script from 'next/script'
+
 import Gist from "react-gist";
 
 import MainLayout from '../../../components/layouts/mainlayout'
@@ -10,19 +11,23 @@ import NotFound from '../../../components/items/notfound';
 import RelatedArticle from '../../../components/items/relatedArticle';
 import styles from '../../../styles/ArticleDetail.module.css';
 
-const NEXT_PUBLIC_ImageDomain = process.env.NEXT_PUBLIC_ImageDomain;
-const NEXT_PUBLIC_AppDomain = process.env.NEXT_PUBLIC_AppDomain;
-const NEXT_PUBLIC_ApiDomain = process.env.NEXT_PUBLIC_ApiDomain;
+import getConfig from 'next/config'
+const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
+
+const NEXT_PUBLIC_ImageDomain = publicRuntimeConfig.NEXT_PUBLIC_ImageDomain;
+const NEXT_PUBLIC_AppDomain = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
+
+
 export async function getServerSideProps(context) {
   // Fetch data from external API
   let _postId = context.params.postId;
-  let _url = NEXT_PUBLIC_ApiDomain+'www/getarticledetail/'+_postId;
+  let _url = serverRuntimeConfig.NEXT_PUBLIC_ApiDomain+'www/getarticledetail/'+_postId;
   const res = await fetch(_url)
   const jsonResult = await res.json()
-  const data = jsonResult.data;
+  //const data = jsonResult.data;
   //console.log(data)
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { jsonResult } }
 }
 
 const ArticleDetailElements=(props)=>{
@@ -83,12 +88,13 @@ const ArticleDetailElements=(props)=>{
   
 }
 
-const Article: NextPage = (jsonResult) => {
+const Article: NextPage = (output) => {
   const router = useRouter()
   const { postId } = router.query
   // console.log('jsonResult');
   // console.log(jsonResult.data);
   // console.log('jsonResult');
+  let jsonResult = output.jsonResult;
    let article = jsonResult.data.article;
    let articleDetail = jsonResult.data.articleDetail;
    let latestArticles = jsonResult.data.latestArticles;

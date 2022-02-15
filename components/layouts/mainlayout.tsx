@@ -1,11 +1,15 @@
+import getConfig from 'next/config'
+const { serverRuntimeConfig,publicRuntimeConfig } = getConfig();
+
 import styles from './../../styles/MainLayout.module.css'
 //import styles from '../styles/MainLayout.module.css'
+
 import Link from 'next/link'
 import Image from 'next/image'
 
 import Header from '../header';
 
-let APP_DOMAIN = process.env.NEXT_PUBLIC_AppDomain;
+let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
 export default function MainLayout({ children, ...props }) {
     return (

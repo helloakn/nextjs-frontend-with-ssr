@@ -1,10 +1,12 @@
 import Head from 'next/head'
-
+import getConfig from 'next/config'
+const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
+let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 export default function Header({...props }) {
     return (
         <Head>
             <title>{props.title?props.title:"Aung Kyaw Nyunt"}</title>
-            <base href={process.env.NEXT_PUBLIC_AppDomain} />
+            <base href={APP_DOMAIN} />
             {/* FOR SE */}
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <meta name="description"                content={props.description?props.description:"aungkyawnyunt.com"} />

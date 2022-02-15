@@ -1,12 +1,11 @@
 import Link from 'next/link'
+import getConfig from 'next/config'
+const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
 
 //import { DefaultColor,IMAGE_Domain,APP_DOMAIN } from "../config";
 let DefaultColor = "#788EBA";
-let IMAGE_Domain = process.env.NEXT_PUBLIC_ImageDomain;
-console.log(`IMAGE_Domain`);
-console.log(IMAGE_Domain);
-console.log(`IMAGE_Domain`);
-let APP_DOMAIN = process.env.NEXT_PUBLIC_AppDomain;
+let IMAGE_Domain = publicRuntimeConfig.NEXT_PUBLIC_ImageDomain;
+let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
 export default function RelatedArticle({...props }) {
     // let item = {
