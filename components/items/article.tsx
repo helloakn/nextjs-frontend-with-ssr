@@ -18,7 +18,7 @@ export default function Article({...props }) {
     //     categories:[]
     // }
     let item = props.item;
-    let categories = item.categories.map((element={},index=0)=>{
+    let categories = item.categories.map(function(element,index){
         return (index===0?
             <Link key={"abuttoncategory"+element.id} href={APP_DOMAIN+"category/"+element.name.toLowerCase()}>
                 <a className="componentArticleAbutton"   >{element.name}</a>
