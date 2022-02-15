@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+//import type { NextPage } from 'next'
 import Link from 'next/link'
 import getConfig from 'next/config'
 const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()

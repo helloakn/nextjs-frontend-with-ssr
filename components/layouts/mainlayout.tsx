@@ -1,4 +1,7 @@
+
 import getConfig from 'next/config'
+import React from 'react'
+
 const { serverRuntimeConfig,publicRuntimeConfig } = getConfig();
 
 import styles from './../../styles/MainLayout.module.css'
@@ -11,7 +14,18 @@ import Header from '../header';
 
 let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
-export default function MainLayout({ children, ...props }) {
+interface IProps {
+    head: string;
+    
+ }
+
+interface IMainLayout {
+    children: React.ReactNode;
+    head:React.ReactNode;
+    title:string;
+ }
+
+export default function MainLayout({ children, ...props }:IMainLayout) {
     return (
     <>
         {

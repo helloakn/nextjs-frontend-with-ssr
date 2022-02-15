@@ -18,7 +18,7 @@ export default function RelatedArticle({...props }) {
     //     categories:[]
     // }
     let item = props.item;
-    let categories = item.categories.map((element,index)=>{
+    let categories = item.categories.map((element:any,index:number)=>{
         return (index===0?
             <Link key={"abuttoncategory"+element.id} href={APP_DOMAIN+"category/"+element.name.toLowerCase()}>
             <a className="componentArticleAbutton"   >{element.name}</a>
@@ -58,7 +58,7 @@ export default function RelatedArticle({...props }) {
                         <label className="componentArticleReleaseDate">{item.created_at}</label>   
                         <Link href={APP_DOMAIN+"article/"+item.link}>
                             <a className="componentArticleAbutton">
-                                Read  &nbsp;<i  color="#ffffff" active="yes" className={" fas fa-chevron-circle-right"} />
+                                Read  &nbsp;<i  color="#ffffff" className={" fas fa-chevron-circle-right"} />
                             </a>
                         </Link>
                         

@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+//import type { NextPage } from 'next';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Script from 'next/script'
@@ -18,22 +18,30 @@ const NEXT_PUBLIC_AppDomain = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 export async function getServerSideProps(context) {
   // Fetch data from external API
   let _categoryId = context.params.categoryId;
+  // console.log('context.params');
+  // console.log(context.params);
+  // console.log('context.params');
   let _url = serverRuntimeConfig.NEXT_PUBLIC_ApiDomain+'www/getcategorydetail/'+_categoryId;
   const res = await fetch(_url)
-  const jsonResult = await res.json()
+  const data = await res.json()
   //const outPout = jsonResult;
   //console.log(data)
   // Pass data to the page via props
-  return { props: { jsonResult } }
+  // console.log('data');
+  // console.log(data);
+  // console.log('data');
+  return { props: { data } }
 }
 
-const Category: NextPage = (output) => {
+//const Category: NextPage = (output) => {
+function Category({data}){
   const router = useRouter()
   const { categoryId } = router.query
-  // console.log('jsonResult');
-  // console.log(output.jsonResult);
-  // console.log('jsonResult');
-  let jsonResult = output.jsonResult;
+  // console.log('c data');
+  // console.log(data);
+  // console.log(data);
+  // console.log('c data');
+  let jsonResult = data;
   // console.log('code');
   // console.log(jsonResult.code);
   // console.log('code');

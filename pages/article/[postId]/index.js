@@ -1,7 +1,6 @@
-import type { NextPage } from 'next';
+//import type { NextPage } from 'next';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Script from 'next/script'
 
 import Gist from "react-gist";
 
@@ -23,11 +22,11 @@ export async function getServerSideProps(context) {
   let _postId = context.params.postId;
   let _url = serverRuntimeConfig.NEXT_PUBLIC_ApiDomain+'www/getarticledetail/'+_postId;
   const res = await fetch(_url)
-  const jsonResult = await res.json()
+  const data = await res.json()
   //const data = jsonResult.data;
   //console.log(data)
   // Pass data to the page via props
-  return { props: { jsonResult } }
+  return { props: { data } }
 }
 
 const ArticleDetailElements=(props)=>{
@@ -88,16 +87,25 @@ const ArticleDetailElements=(props)=>{
   
 }
 
-const Article: NextPage = (output) => {
+
+// interface Idata {
+//   data:Object;
+  
+// }
+
+//const Article: NextPage = ({data}) => {
+//function Article({ data }:Idata) {
+  function Article({ data }) {
   const router = useRouter()
   const { postId } = router.query
-  // console.log('jsonResult');
-  // console.log(jsonResult.data);
-  // console.log('jsonResult');
-  let jsonResult = output.jsonResult;
-   let article = jsonResult.data.article;
-   let articleDetail = jsonResult.data.articleDetail;
-   let latestArticles = jsonResult.data.latestArticles;
+  // console.log('data');
+  // console.log(data.data);
+  
+  // console.log('data');
+  let jsonResult = data;
+  let article = jsonResult.data.article;
+  let articleDetail = jsonResult.data.articleDetail;
+  let latestArticles = jsonResult.data.latestArticles;
   //  console.log(articleDetail);
     if(jsonResult.code!=200){
       return (
@@ -114,7 +122,7 @@ const Article: NextPage = (output) => {
       )
     }
    let categories = article.categories.map((element,index)=>{
-     console.log(NEXT_PUBLIC_AppDomain);
+  //   console.log(NEXT_PUBLIC_AppDomain);
     return (index===0?
         <Link key={"abuttoncategory"+element.id} href={NEXT_PUBLIC_AppDomain+"category/"+element.name.toLowerCase()}>
           <a className="componentArticleAbutton"   >{element.name}</a>
