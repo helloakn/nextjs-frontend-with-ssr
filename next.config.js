@@ -7,6 +7,7 @@
 // }
 module.exports = {
   noImplicitAny:false,
+  reactStrictMode: true,
   serverRuntimeConfig: {
     // Will only be available on the server side
     NEXT_PUBLIC_AppDomain:    process.env.NEXT_PUBLIC_AppDomain,
