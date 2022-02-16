@@ -47,37 +47,46 @@ const ArticleDetailElements=(props)=>{
   switch(_element.type){
       case '1': // image
           return (
-              <div>
-                  <h1 className="hCaption">{_element.title}</h1>
-                  <img src={_element.description} alt="article Detail" />
+              <div className="componentArticleDetail">
+                  <div className="hCaption marginTop5px">{_element.title}</div>
+                  <div className="marginBottom5px marginTop5px" >{_element.before_description}</div>
+                  <img src={_element.value} alt="article Detail" width="95%" />
+                  <div>{_element.after_description}</div>
               </div>
           );
       case '2': // gist code
           return (
-              <div>
-                  <h3 className={styles.hCaption}>{_element.title}</h3>
-                  <Gist id={_element.description} />
+              <div className="componentArticleDetail">
+                <div className="hCaption marginTop5px">{_element.title}</div>
+                <div className="marginBottom5px marginTop5px" >{_element.before_description}</div>
+                <Gist id={_element.value} />
+                <div>{_element.after_description}</div>
               </div>
               
           );
       case '3': // single code
               return (
-                  <div className={styles.DivCodeContainer}>
-                      <h3 className={styles.hCaption}>{_element.title}</h3>
-                      <div className={styles.DivCode} dangerouslySetInnerHTML={{
-                          __html: _element.description
+                  <div className="componentArticleDetail">
+                    <div className="hCaption marginTop5px">{_element.title}</div>
+                    <div className="marginBottom5px marginTop5px" >{_element.before_description}</div>
+                    <div className={styles.DivCode} dangerouslySetInnerHTML={{
+                          __html: _element.value
                       }} >
                       </div>
+                    <div>{_element.after_description}</div>
                   </div>
+
               );
       case '4': // text
           return (
-              <div>
-                  <h3 className={styles.hCaption}>{_element.title}</h3>
-                  <div dangerouslySetInnerHTML={{
-                      __html: _element.description
+              <div className="componentArticleDetail">
+                <div className="hCaption marginTop5px">{_element.title}</div>
+                <div className="marginBottom5px marginTop5px" >{_element.before_description}</div>
+                <div dangerouslySetInnerHTML={{
+                      __html: _element.value
                   }} >
                   </div>
+                <div>{_element.after_description}</div>
               </div>
           );
       
@@ -167,7 +176,7 @@ const ArticleDetailElements=(props)=>{
 
         <div className={styles.ArticleDetailHeaderInnerRight}>
           <div className={styles.ArticleDetailHeaderInnerRightTitle}>
-            {article.title}
+            <h1 className="PageTitle"> {article.title}</h1>
           </div>
           <div className={styles.ArticleDetailHeaderInnerRightCategory}>
             {categories}

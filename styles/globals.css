@@ -207,11 +207,32 @@ a {
 .marginTop10px{
   margin-top:10px;
 }
+.marginTop5px{
+  margin-top:5px;
+}
 .marginTop20px{
   margin-top:20px;
+}
+.marginBottom5px{
+  margin-bottom:5px;
+}
+.marginBottom3px{
+  margin-bottom:3px;
 }
 
 .marginBottom10px{
   margin-bottom:10px;
 }
 
+.PageTitle{
+  font-size:25px;
+}
+.hCaption{
+  font-weight:bold;
+  color:#788EBA;
+}
+.componentArticleDetail{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
