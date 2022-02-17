@@ -141,6 +141,7 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    padding-bottom:20px;
 }
 .ArticleDetailBodyInner{
     width:80%;
@@ -192,8 +193,9 @@ margin-top:20px;
     font-weight:bold;
     color:#24292f;
     padding:10px;
-    width:90% !important;
+    width:99% !important;
     border-radius:5px;
+    margin-right:5px;
 }
 @media only screen and (max-width: 600px) {
     .ArticleDetailBodyInner{

@@ -183,7 +183,7 @@ const ArticleDetailElements=(props)=>{
           </div>
           <div className={styles.ArticleDetailHeaderInnerRightAuthor}>
             <div className={styles.ArticleDetailHeaderInnerRightAuthorImage}>
-              <img src="https://d2y7r2fmr1u4v.cloudfront.net/author/person.png" alt="aa" className={styles.AuthorImage} />
+              <img src="https://d2y7r2fmr1u4v.cloudfront.net/author/person.png" alt={article.title} className={styles.AuthorImage} />
             </div>
             <div className={styles.ArticleDetailHeaderInnerRightAuthorDetail}>
               <label>Author : Aung Kyaw Nyunt</label>
