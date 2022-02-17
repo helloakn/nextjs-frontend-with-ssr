@@ -1,8 +1,10 @@
 
+import Script from 'next/script'
+
 import getConfig from 'next/config'
 import React from 'react'
 
-const { serverRuntimeConfig,publicRuntimeConfig } = getConfig();
+const { publicRuntimeConfig } = getConfig();
 
 import styles from './../../styles/MainLayout.module.css'
 //import styles from '../styles/MainLayout.module.css'
@@ -26,6 +28,7 @@ interface IMainLayout {
  }
 
 export default function MainLayout({ children, ...props }:IMainLayout) {
+    const _googleUrl = "https://www.googletagmanager.com/gtag/js?id="+publicRuntimeConfig.NEXT_PUBLIC_GA_MEASUREMENT_ID;
     return (
     <>
         {
@@ -43,6 +46,24 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
 {/* Start Header */ }
     <div className={styles.mainHeaderContainer}>
                 
+
+
+        { /*START Global site tag (gtag.js) - Google Analytics*/ }
+        <Script
+            src={"https://www.googletagmanager.com/gtag/js?id="+publicRuntimeConfig.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+            strategy="beforeInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${publicRuntimeConfig.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+        `}
+        </Script>
+      { /* END Global site tag (gtag.js) - Google Analytics*/ }
+
         {/* Start Small Menu */ }
         <div className={styles.menuSmallContainer}>
                     <div className={styles.menuInnerContainer}>
@@ -187,9 +208,11 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
             </div>
             {/* END Footer */ }
 
+        
             
         </div>
         {/* Begin Body */ }
+       
     </>
     )
 }

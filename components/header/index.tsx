@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import Head from 'next/head'
 import getConfig from 'next/config'
 const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
@@ -40,6 +41,10 @@ export default function Header({...props }) {
             integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
             crossOrigin="anonymous"
             />
+
+
+       
+
         </Head>
     )
 }
