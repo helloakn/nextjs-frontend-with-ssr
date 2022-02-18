@@ -162,7 +162,7 @@
       .mainBodyContainer{
         margin-top:150px !important;
         display:flex;
-        flex-direction:column;
+        flex-direction:row;
        
       }
       .bodyInnerContainer{
