@@ -308,3 +308,12 @@
  .footerRow i{
   width:10%;
  }
+
+ .AdsContainer{
+ width: 100%;
+ display:flex;
+ flex-direction:column;
+ justify-content:flex-start;
+ align-items:flex-start;
+ margin-top:10px;
+ }
