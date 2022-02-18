@@ -138,9 +138,10 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                 <div className={styles.bodyInnerContainer}>
                     {children}
                 </div>
-                <div className={styles.AdsContainer}>
+                
+            </div>
+            <div className={styles.AdsContainer}>
                    <Ads />
-                </div>
             </div>
             {/* END Content */ }
 
