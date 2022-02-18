@@ -139,7 +139,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                     {children}
                 </div>
                 <div className={styles.AdsContainer}>
-                    <script type="text/javascript" data-adel="atag" src="//achcdn.com/script/atg.js" czid="zepmguokms"></script>
+                   <Ads />
                 </div>
             </div>
             {/* END Content */ }
