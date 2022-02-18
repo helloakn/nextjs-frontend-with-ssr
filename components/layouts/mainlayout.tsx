@@ -14,6 +14,7 @@ import Image from 'next/image'
 
 import Header from '../header';
 
+import Ads from '../ads';
 let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
 interface IProps {
@@ -137,6 +138,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                 <div className={styles.bodyInnerContainer}>
                     {children}
                 </div>
+                <Ads/>
             </div>
             {/* END Content */ }
 
