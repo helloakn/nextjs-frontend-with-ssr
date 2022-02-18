@@ -5,12 +5,14 @@ export default function Ads({...props }) {
         <>
             { /*START Global site tag (gtag.js) - Google Analytics*/ }
         <Script
-            src={"//achcdn.com/script/atg.js"}
+            src={"//clearonclick.com/a/display.php?r=5620518"}
             strategy="beforeInteractive"
-            czid="zepmguokms"
-            data-adel="atag"
+            data-cfasync="false"
         />
         </>
     );
     
 }
+/*
+<script data-cfasync="false" type="text/javascript" src="//clearonclick.com/a/display.php?r=5620518"></script>
+*/
