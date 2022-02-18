@@ -32,7 +32,7 @@ export default function Header({...props }) {
             <meta property="og:description"         content={props.description?props.description:"Aung Kyaw Nyunt's portfolio website as well as tutorial website for aws tutorial, docker tutorial, devops tutorial, programming tutorial , etc..."} />
             <meta property="og:image"               content={props.image?props.image:"https://d2y7r2fmr1u4v.cloudfront.net/author/akn.png"} />
 
-            
+            <meta name="a.validate.02" content="YaNi53bzv7MsOb9ZmhTMGEKxy7Rn3I_ZoIYa" />
 
             <link rel="icon" href="/media/logo.svg" />
             <link
@@ -43,7 +43,7 @@ export default function Header({...props }) {
             />
 
 
-       
+            
 
         </Head>
     )

@@ -245,8 +245,10 @@ a {
 }
 .page-link:hover{
   color: #ffffff !important;
-  
+  background-color:#788EBA !important;
+  border-radius: 50px;
 }
+
 .aActive{
   color:#ffffff !important;
 }
