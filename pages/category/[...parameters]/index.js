@@ -12,16 +12,22 @@ import NotFound from '../../../components/items/notfound';
 import Article from '../../../components/items/article';
 import styles from '../../../styles/CategoryArticle.module.css';
 
+import Pagination from '../../../components/pagination';
+
 const NEXT_PUBLIC_ImageDomain = publicRuntimeConfig.NEXT_PUBLIC_ImageDomain;
 const NEXT_PUBLIC_AppDomain = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
 export async function getServerSideProps(context) {
   // Fetch data from external API
-  let _categoryId = context.params.categoryId;
-  // console.log('context.params');
-  // console.log(context.params);
-  // console.log('context.params');
-  let _url = serverRuntimeConfig.NEXT_PUBLIC_ApiDomain+'www/getcategorydetail/'+_categoryId;
+  let _parameters = context.params.parameters;
+  //  console.log('context.params');
+  //  console.log(_parameters.length);
+  //  console.log('context.params');
+  let _categoryId = _parameters[0];
+  let _pageAt = _parameters.length>1?_parameters[1]:1;
+  _pageAt = !isNaN(_pageAt)?_pageAt:1;
+  let _url = serverRuntimeConfig.NEXT_PUBLIC_ApiDomain+'www/getcategorydetail/'+_categoryId+'?page_at='+_pageAt;
+  console.log(_url);
   const res = await fetch(_url)
   const data = await res.json()
   //const outPout = jsonResult;
@@ -36,11 +42,15 @@ export async function getServerSideProps(context) {
 //const Category: NextPage = (output) => {
 function Category({data}){
   const router = useRouter()
-  const { categoryId } = router.query
-  // console.log('c data');
-  // console.log(data);
-  // console.log(data);
-  // console.log('c data');
+  const { parameters } = router.query
+  let _parameters = parameters;
+  let _categoryId = _parameters[0];
+  let _pageAt = _parameters.length>1?_parameters[1]:1;
+  _pageAt = !isNaN(_pageAt)?_pageAt:1;
+
+  console.log('router');
+  console.log(_categoryId);
+  console.log('end route');
   let jsonResult = data;
   // console.log('code');
   // console.log(jsonResult.code);
@@ -62,7 +72,7 @@ function Category({data}){
 
   let categoryDetail = jsonResult.data.categoryDetail;
   let articles = jsonResult.data.articles;
-  //  console.log(articleDetail);
+  let paginate = jsonResult.paginate;
 
 
   let articlesData = articles.map((element,index)=>{
@@ -79,7 +89,7 @@ function Category({data}){
           title={categoryDetail.name+" Tutorial"}
           description={categoryDetail.description}
           image={NEXT_PUBLIC_ImageDomain+categoryDetail.image}
-          url={NEXT_PUBLIC_AppDomain+"category/"+categoryId}
+          url={NEXT_PUBLIC_AppDomain+"category/"+_categoryId+"/"+_pageAt}
         />
       }
     >
@@ -97,6 +107,10 @@ function Category({data}){
       <div className={styles.CategoryBodyInner}>
       {articlesData}
       </div>
+      
+    </div>
+    <div className={styles.CategoryPaginationContainer}>
+        <Pagination paginate={paginate} styles={styles} root={"/category/"+_categoryId} page_at={_pageAt} />
     </div>
     {/* End Body */}
     

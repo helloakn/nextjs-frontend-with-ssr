@@ -28,6 +28,7 @@ interface IMainLayout {
  }
 
 export default function MainLayout({ children, ...props }:IMainLayout) {
+    
     const _googleUrl = "https://www.googletagmanager.com/gtag/js?id="+publicRuntimeConfig.NEXT_PUBLIC_GA_MEASUREMENT_ID;
     return (
     <>

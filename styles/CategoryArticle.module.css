@@ -60,3 +60,17 @@
     
 }
 /* end header responsive */
+
+.CategoryPaginationContainer{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.InnerPagination{
+    
+}

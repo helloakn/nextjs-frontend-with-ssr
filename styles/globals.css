@@ -236,3 +236,17 @@ a {
   flex-direction:column;
   justify-content:flex-start;
 }
+
+/* pagination */
+.page-link{
+  color: #788EBA !important;
+  background: transparent !important;
+  padding: 0.7rem 0.95rem;
+}
+.page-link:hover{
+  color: #ffffff !important;
+  
+}
+.aActive{
+  color:#ffffff !important;
+}
