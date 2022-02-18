@@ -252,3 +252,9 @@ a {
 .aActive{
   color:#ffffff !important;
 }
+
+#divAdvertisement{
+  width:728px;
+  height:90px;
+  background-color:#2a2a32;
+}

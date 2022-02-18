@@ -14,7 +14,7 @@ import Image from 'next/image'
 
 import Header from '../header';
 
-import Ads from '../ads';
+import ExternalAd from '../ExternalAd';
 let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
 interface IProps {
@@ -138,11 +138,12 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                 <div className={styles.bodyInnerContainer}>
                     {children}
                 </div>
+                <div className={styles.AdsContainer}>
                 
+                <ExternalAd/>
             </div>
-            <div className={styles.AdsContainer}>
-                   <Ads />
             </div>
+            
             {/* END Content */ }
 
 
@@ -150,6 +151,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
 
             {/* Start Footer */ }
             <div className={styles.mainFooterContainer}>
+               
                 <div className={styles.mainFooterInnerContainer}>
                    
                     <div className={styles.footerColumn}>

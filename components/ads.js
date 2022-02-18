@@ -5,8 +5,10 @@ export default function Ads({...props }) {
         <>
             { /*START Global site tag (gtag.js) - Google Analytics*/ }
         <Script
+            async
+            defer
             src={"//clearonclick.com/a/display.php?r=5620518"}
-            strategy="beforeInteractive"
+            strategy="lazyOnload"
             data-cfasync="false"
         />
         </>
