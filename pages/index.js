@@ -7,6 +7,7 @@ import MainLayout from '../components/layouts/mainlayout'
 import Header from '../components/header';
 import Article from '../components/items/article';
 
+
 import styles from '../styles/Home.module.css';
 
 import {chunkArray} from '../classes/chunkarray';
@@ -196,7 +197,7 @@ function Home({ data }) {
           </div>
         </div>
         {/* END Latest Articles */}
-
+       
     </MainLayout>
   )
 }

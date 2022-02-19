@@ -15,6 +15,8 @@ import Image from 'next/image'
 import Header from '../header';
 
 import ExternalAd from '../ExternalAd';
+import SquareAdsense from '../googleAdsense/SquareAdsense';
+
 let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
 interface IProps {
@@ -140,7 +142,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                 </div>
                 <div className={styles.AdsContainer}>
                 
-                <ExternalAd/>
+                <SquareAdsense/>
             </div>
             </div>
             

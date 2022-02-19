@@ -1,6 +1,7 @@
 import Script from 'next/script'
 import Head from 'next/head'
-import getConfig from 'next/config'
+import getConfig from 'next/config';
+
 const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
 let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 export default function Header({...props }) {
@@ -43,7 +44,10 @@ export default function Header({...props }) {
             />
 
 
-            
+            <Script 
+                data-ad-client={publicRuntimeConfig.NEXT_PUBLIC_GAdsenseClient_Square}
+                async src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
+            ></Script>
 
         </Head>
     )

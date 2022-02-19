@@ -20,7 +20,8 @@ module.exports = {
     NEXT_PUBLIC_AppDomain:    process.env.NEXT_PUBLIC_AppDomain,
     NEXT_PUBLIC_ImageDomain:  process.env.NEXT_PUBLIC_ImageDomain,
     staticFolder: '/static',
-    NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+    NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+    NEXT_PUBLIC_GAdsenseClient_Square:process.env.NEXT_PUBLIC_GAdsenseClient_Square
   }
 }
 
