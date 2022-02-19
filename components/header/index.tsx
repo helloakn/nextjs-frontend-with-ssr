@@ -45,8 +45,9 @@ export default function Header({...props }) {
 
 
             <Script 
-                data-ad-client={publicRuntimeConfig.NEXT_PUBLIC_GAdsenseClient_Square}
-                async src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
+                async 
+                src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+publicRuntimeConfig.NEXT_PUBLIC_GAdsenseClient_Square}
+                crossOrigin="anonymous"
             ></Script>
 
         </Head>
