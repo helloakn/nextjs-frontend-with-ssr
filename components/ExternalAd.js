@@ -5,23 +5,36 @@ export default function ExternalAd() {
   const advRef = useRef(null)
 return(
     <>
-    <div id="divAdvertisement">aa</div>
-    <Script
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-    var oldDocumentWrite = document.write
+    <div id="divAdvertisement"></div>
 
-    // change document.write temporary
-    document.write = function(node){
-       // $("body").append(node)
-      // alert(node);
-       document.getElementById('divAdvertisement').innerHTML = node.innerHTML=node;
-    }
-  `,
-  }}
-/>
-  <Script data-cfasync="false"  src="//clearonclick.com/a/display.php?r=5620634" strategy="afterInteractive"></Script>
+    
+    <Script
+    strategy="afterInteractive"
+    dangerouslySetInnerHTML={{
+        __html: `
+        var oldDocumentWrite = document.write
+
+        // change document.write temporary
+        document.write = function(node){
+        // $("body").append(node)
+        // alert(node);
+        let _divAdvertisementHtml = document.getElementById('divAdvertisement').innerHTML;
+        document.getElementById('divAdvertisement').innerHTML = _divAdvertisementHtml + node;
+        }
+    `,
+    }}
+    />
+    <Script 
+    data-cfasync="false"  
+    src="https://clearonclick.com/a/display.php?r=5620890" 
+    strategy="afterInteractive"
+    onLoad={() => {
+        setTimeout(function() {
+            document.write = oldDocumentWrite;
+            console.log('finished loading');
+        }, 100)
+    }}
+    ></Script>
            
     </>
 )
