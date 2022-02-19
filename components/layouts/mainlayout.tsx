@@ -1,16 +1,17 @@
 
+import React, { useEffect, useRef } from "react"
+
 import Script from 'next/script'
+import Link from 'next/link'
+import Image from 'next/image'
 
-import getConfig from 'next/config'
-import React from 'react'
-
+import getConfig from 'next/config';
 const { publicRuntimeConfig } = getConfig();
 
 import styles from './../../styles/MainLayout.module.css'
 //import styles from '../styles/MainLayout.module.css'
 
-import Link from 'next/link'
-import Image from 'next/image'
+
 
 import Header from '../header';
 
@@ -32,7 +33,16 @@ interface IMainLayout {
 
 export default function MainLayout({ children, ...props }:IMainLayout) {
     
-    const _googleUrl = "https://www.googletagmanager.com/gtag/js?id="+publicRuntimeConfig.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  
+    // useEffect(() => {
+    //     var ads = document.getElementsByClassName("adsbygoogle").length;
+    //     for (var i = 0; i < ads; i++) {
+    //       try {
+    //         (adsbygoogle = window.adsbygoogle || []).push({});
+    //       } catch (e) { }
+    //     }
+    // }, []);
+
     return (
     <>
         {
@@ -55,8 +65,12 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
         <Script 
             async 
             src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+publicRuntimeConfig.NEXT_PUBLIC_GAdsenseClient_Square}
+            
             crossOrigin="anonymous"
+            
             strategy="beforeInteractive"
+            
+            
         ></Script>
         { /*END Square Google Adsense */ }
         { /*START Global site tag (gtag.js) - Google Analytics*/ }

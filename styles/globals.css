@@ -258,9 +258,7 @@ a {
   height:90px;
   background-color:#2a2a32;
 }
-.adsbygoogle{
-display:block;
-}
+
 
 .example_responsive_1 { width: 320px; height: 100px; }
 @media(min-width: 500px) { .example_responsive_1 { width: 468px; height: 60px; } }
