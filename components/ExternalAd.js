@@ -21,7 +21,7 @@ return(
   `,
   }}
 />
-  <Script data-cfasync="false"  src="//clearonclick.com/a/display.php?r=5620634&sub1=#divAdvertisement" strategy="afterInteractive"></Script>
+  <Script data-cfasync="false"  src="//clearonclick.com/a/display.php?r=5620634" strategy="afterInteractive"></Script>
            
     </>
 )
