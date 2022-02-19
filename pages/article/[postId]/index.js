@@ -16,6 +16,8 @@ const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
 const NEXT_PUBLIC_ImageDomain = publicRuntimeConfig.NEXT_PUBLIC_ImageDomain;
 const NEXT_PUBLIC_AppDomain = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
+//import SquareAdsense from '../googleAdsense/SquareAdsense';
+import SquareAdsense from '../../../components/googleAdsense/SquareAdsense';
 
 export async function getServerSideProps(context) {
   // Fetch data from external API
@@ -215,6 +217,7 @@ const ArticleDetailElements=(props)=>{
             
           </div> 
           <div className={styles.ArticleDetailContent}>
+           
             {articleDetails}
           </div> 
 
@@ -222,7 +225,9 @@ const ArticleDetailElements=(props)=>{
 
         <div className={styles.ArticleDetailBodyInnerRight}>
         <h3 className={styles.hCaption}>Here is you may also like.</h3>
+        
           {relatedArticles}
+          <SquareAdsense currentPath="SquareAdsense" />
         </div>
       </div>
     </div>

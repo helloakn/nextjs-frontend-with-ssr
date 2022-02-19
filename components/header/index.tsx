@@ -1,3 +1,5 @@
+import React, { useEffect, useRef } from "react"
+
 import Script from 'next/script'
 import Head from 'next/head'
 import getConfig from 'next/config';
@@ -5,6 +7,15 @@ import getConfig from 'next/config';
 const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
 let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 export default function Header({...props }) {
+
+//     useEffect(() => {
+//         var ads = document.getElementsByClassName("adsbygoogle").length;
+//         for (var i = 0; i < ads; i++) {
+//           try {
+//             (adsbygoogle = window.adsbygoogle || []).push({});
+//           } catch (e) { }
+//         }
+//   }, []);
     return (
         <Head>
             <title>{props.title?props.title:"Aung Kyaw Nyunt"}</title>
@@ -45,7 +56,7 @@ export default function Header({...props }) {
  
  <script 
             async 
-            src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+publicRuntimeConfig.NEXT_PUBLIC_GAdsenseClient_Square}
+            src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+publicRuntimeConfig.NEXT_PUBLIC_GAdsense_Client}
             
             crossOrigin="anonymous"
             

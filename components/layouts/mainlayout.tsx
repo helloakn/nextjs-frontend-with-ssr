@@ -16,7 +16,8 @@ import styles from './../../styles/MainLayout.module.css'
 import Header from '../header';
 
 import ExternalAd from '../ExternalAd';
-import SquareAdsense from '../googleAdsense/SquareAdsense';
+//import SquareAdsense from '../googleAdsense/SquareAdsense';
+import HorizonalAdsense from '../googleAdsense/HorizonalAdsense';
 
 let APP_DOMAIN = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
 
@@ -154,8 +155,8 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                 </div>
                 <div className={styles.AdsContainer}>
                 
-                <SquareAdsense currentPath="aaa" />
-            </div>
+                <HorizonalAdsense currentPath="HorizonalAdsense" />
+                </div>
             </div>
             
             {/* END Content */ }
