@@ -43,7 +43,14 @@ export default function Header({...props }) {
             crossOrigin="anonymous"
             />
  
-
+ <script 
+            async 
+            src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+publicRuntimeConfig.NEXT_PUBLIC_GAdsenseClient_Square}
+            
+            crossOrigin="anonymous"
+            
+            
+        ></script>
            
 
         </Head>

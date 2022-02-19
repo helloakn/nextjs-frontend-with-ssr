@@ -62,16 +62,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                 
 
         { /*START Square Google Adsense */ }
-        <Script 
-            async 
-            src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+publicRuntimeConfig.NEXT_PUBLIC_GAdsenseClient_Square}
-            
-            crossOrigin="anonymous"
-            
-            strategy="beforeInteractive"
-            
-            
-        ></Script>
+        
         { /*END Square Google Adsense */ }
         { /*START Global site tag (gtag.js) - Google Analytics*/ }
         <Script
@@ -163,7 +154,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                 </div>
                 <div className={styles.AdsContainer}>
                 
-                <SquareAdsense/>
+                <SquareAdsense currentPath="aaa" />
             </div>
             </div>
             

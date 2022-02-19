@@ -3,18 +3,15 @@ import Script from 'next/script'
 import getConfig from 'next/config'
 const { publicRuntimeConfig } = getConfig();
 //NEXT_PUBLIC_GAdsenseClient_Square=ca-pub-8018701717083970
-export default function SquareAdsense() {
+export default function SquareAdsense(...props) {
+    const { currentPath } = props;
     useEffect(() => {
-        try {
-          // @ts-ignore
-          (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (err) {
-          console.error(err);
-        }
-      }, []);
+        window.adsbygoogle = window.adsbygoogle || []
+        window.adsbygoogle.push({})
+      }, [currentPath])
 
 return(
-    <>
+    <div key={currentPath}>
     { /*START Square Google Adsense */ }
 
         
@@ -30,6 +27,6 @@ return(
         
       { /* END Square Google Adsense */ }
            
-    </>
+    </div>
 )
 }
