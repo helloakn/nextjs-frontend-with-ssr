@@ -42,13 +42,9 @@ export default function Header({...props }) {
             integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
             crossOrigin="anonymous"
             />
+ 
 
-
-            <Script 
-                async 
-                src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+publicRuntimeConfig.NEXT_PUBLIC_GAdsenseClient_Square}
-                crossOrigin="anonymous"
-            ></Script>
+           
 
         </Head>
     )

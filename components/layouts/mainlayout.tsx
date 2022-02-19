@@ -51,7 +51,14 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
     <div className={styles.mainHeaderContainer}>
                 
 
-
+        { /*START Square Google Adsense */ }
+        <Script 
+            async 
+            src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+publicRuntimeConfig.NEXT_PUBLIC_GAdsenseClient_Square}
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+        ></Script>
+        { /*END Square Google Adsense */ }
         { /*START Global site tag (gtag.js) - Google Analytics*/ }
         <Script
             src={"https://www.googletagmanager.com/gtag/js?id="+publicRuntimeConfig.NEXT_PUBLIC_GA_MEASUREMENT_ID}
