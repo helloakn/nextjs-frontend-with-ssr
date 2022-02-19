@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /_next/
+Disallow: /media/
+Disallow: /*.xls$
+Disallow: /*.pdf$
+Disallow: /*.doc$
+
+User-agent: *
+Allow: /
+
+
+Sitemap: https://www.aungkyawnyunt.com/sitemap.xml

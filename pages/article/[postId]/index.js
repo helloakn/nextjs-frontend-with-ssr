@@ -52,7 +52,7 @@ const ArticleDetailElements=(props)=>{
               <div className="componentArticleDetail">
                   <div className="hCaption marginTop5px">{_element.title}</div>
                   <div className="marginBottom5px marginTop5px" >{_element.before_description}</div>
-                  <img src={_element.value} alt="article Detail" width="95%" />
+                  <img src={_element.value} alt={_element.title} width="95%" />
                   <div>{_element.after_description}</div>
               </div>
           );
@@ -173,7 +173,7 @@ const ArticleDetailElements=(props)=>{
     <div className={styles.ArticleDetailHeader}>
       <div className={styles.ArticleDetailHeaderInner}>
         <div className={styles.ArticleDetailHeaderInnerLeft}>
-          <img src={NEXT_PUBLIC_ImageDomain+article.image} className={styles.ArticleDetailImage} />
+          <img src={NEXT_PUBLIC_ImageDomain+article.image} alt={article.title} className={styles.ArticleDetailImage} />
         </div>
 
         <div className={styles.ArticleDetailHeaderInnerRight}>
@@ -185,7 +185,7 @@ const ArticleDetailElements=(props)=>{
           </div>
           <div className={styles.ArticleDetailHeaderInnerRightAuthor}>
             <div className={styles.ArticleDetailHeaderInnerRightAuthorImage}>
-              <img src="https://d2y7r2fmr1u4v.cloudfront.net/author/person.png" alt={article.title} className={styles.AuthorImage} />
+              <img src="https://d2y7r2fmr1u4v.cloudfront.net/author/person.png" alt="Aung Kyaw Nyunt" className={styles.AuthorImage} />
             </div>
             <div className={styles.ArticleDetailHeaderInnerRightAuthorDetail}>
               <label>Author : Aung Kyaw Nyunt</label>

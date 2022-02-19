@@ -33,7 +33,9 @@ export default function Header({...props }) {
             <meta property="og:title"              content={props.title?props.title:"Aung Kyaw Nyunt"} />
             <meta property="og:description"        content={props.description?props.description:"Aung Kyaw Nyunt's portfolio website as well as tutorial website for aws tutorial, docker tutorial, devops tutorial, programming tutorial , etc..."} />
             <meta property="og:image"              content={props.image?props.image:"https://d2y7r2fmr1u4v.cloudfront.net/author/akn.png"} />
+            <meta property="og:image:alt"              content={props.title?props.title:"Aung Kyaw Nyunt"} />
             <meta property="fb:app_id"              content="275373384703871" />
+            
             
             {/* FOR Twitter */}
             <meta name="twitter:card"               content="summary" />

@@ -32,7 +32,7 @@ export default function RelatedArticle({...props }) {
     return (
         <div className="componentRelatedArticleContainer marginTop10px marginBottom10px">
             <div className="componentArticleImageContainer">
-            <img alt="media" src={IMAGE_Domain+item.image} width="100%"/>
+            <img alt={item.title} src={IMAGE_Domain+item.image} width="100%"/>
             </div>
             <div className="componentArticleBodyContainer">
                 <div className="componentArticleBodyContainerInner">
