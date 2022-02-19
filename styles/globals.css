@@ -267,3 +267,6 @@ a {
 @media(min-width: 800px) { .example_responsive_1 { width: 728px; height: 90px; } }
 
 .horizonalAds{width:80vw;}
+.squardAds{
+  width:300px;
+}

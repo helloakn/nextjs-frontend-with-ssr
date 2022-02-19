@@ -15,7 +15,7 @@ return(
     { /*START Square Google Adsense */ }
 
         
-        <ins className="adsbygoogle example_responsive_1"
+        <ins className="adsbygoogle squardAds"
             style={{display: 'block'}}
             data-ad-client={publicRuntimeConfig.NEXT_PUBLIC_GAdsense_Client}
             data-ad-slot="2377556211"
