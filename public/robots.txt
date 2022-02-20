@@ -1,12 +1,13 @@
 User-agent: *
 Disallow: /_next/
 Disallow: /media/
+Disallow: /article/[postId]
+Disallow: /category/[...parameters]
 Disallow: /*.xls$
 Disallow: /*.pdf$
 Disallow: /*.doc$
 
 User-agent: *
 Allow: /
-
 
 Sitemap: https://www.aungkyawnyunt.com/sitemap.xml

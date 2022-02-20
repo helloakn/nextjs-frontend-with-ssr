@@ -21,20 +21,24 @@ export default function Header({...props }) {
             <title>{props.title?props.title:"Aung Kyaw Nyunt"}</title>
             <base href={APP_DOMAIN} />
             {/* FOR SE */}
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <meta name="viewport"                   content="width=device-width, initial-scale=1"/>
             <meta name="description"                content={props.description?props.description:"aungkyawnyunt.com"} />
             <meta name="keywords"                   content={props.description?props.description:"Aung Kyaw Nyunt's portfolio website as well as tutorials website for aws tutorial, docker tutorial, devops tutorial, programming tutorial , etc..."} />
-            <meta name="author"                   content="Aung Kyaw Nyunt" />
+            <meta name="author"                     content="Aung Kyaw Nyunt" />
             <meta name="robots"                     content="index, follow" />
             
             {/* FOR facebook */}
-            <meta property="og:url"                content={props.url?props.url:"https://www.aungkyawnyunt.com"} />
-            <meta property="og:type"               content="article" />
-            <meta property="og:title"              content={props.title?props.title:"Aung Kyaw Nyunt"} />
-            <meta property="og:description"        content={props.description?props.description:"Aung Kyaw Nyunt's portfolio website as well as tutorial website for aws tutorial, docker tutorial, devops tutorial, programming tutorial , etc..."} />
-            <meta property="og:image"              content={props.image?props.image:"https://d2y7r2fmr1u4v.cloudfront.net/author/akn.png"} />
-            <meta property="og:image:alt"              content={props.title?props.title:"Aung Kyaw Nyunt"} />
+            <meta property="og:url"                 content={props.url?props.url:"https://www.aungkyawnyunt.com"} />
+            <meta property="og:type"                content="article" />
+            <meta property="og:title"               content={props.title?props.title:"Aung Kyaw Nyunt"} />
+            <meta property="og:description"         content={props.description?props.description:"Aung Kyaw Nyunt's portfolio website as well as tutorial website for aws tutorial, docker tutorial, devops tutorial, programming tutorial , etc..."} />
+            <meta property="og:image"               content={props.image?props.image:"https://d2y7r2fmr1u4v.cloudfront.net/author/akn.png"} />
+            <meta property="og:image:alt"           content={props.title?props.title:"Aung Kyaw Nyunt"} />
             <meta property="fb:app_id"              content="275373384703871" />
+            <meta property="og:locale"              content="en_US" />
+            <meta property="fb:pages"               content="109894603843759" />
+            <meta property="ia:rules_url"           content={props.url?props.url:"https://www.aungkyawnyunt.com"} />
+            <meta property="ia:markup_url"          content={props.url?props.url:"https://www.aungkyawnyunt.com"} />
             
             
             {/* FOR Twitter */}
