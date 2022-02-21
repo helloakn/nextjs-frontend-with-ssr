@@ -121,7 +121,7 @@ function Home({ data }) {
                       <a className={styles.btnDownloadCV}>Download CV</a>
                   </Link>
                   <Link href="mailto:aungkyawnyunt2004@gmail.com">
-                      <a className={styles.btnHireMe}>Hire Me</a>
+                      <a className={styles.btnHireMe}>Contact Me</a>
                   </Link>
                 </div>
               </div>
