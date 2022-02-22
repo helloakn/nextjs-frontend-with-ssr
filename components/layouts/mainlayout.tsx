@@ -227,6 +227,23 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                         </div>
                     </div>
 
+                    <div className={styles.footerColumn}>
+                        <div className={styles.footerCaption}>Rule and Policy</div>
+                        <div className={styles.footerParagraph}>
+                            <div className={styles.footerRow}>
+                                <Link href="/privacy-policy">
+                                 <a>Privacy Policy</a>
+                                </Link>
+                            </div>
+                            <div className={styles.footerRow}>
+                            &nbsp;
+                            </div>
+                            <div className={styles.footerRow}>
+                            &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             {/* END Footer */ }
