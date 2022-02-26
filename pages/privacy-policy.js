@@ -83,13 +83,15 @@ function Home({ data }) {
                 <h2>Collecting and Using Your Personal Data</h2>
                 <h3>Types of Data Collected</h3>
                 <h4>Personal Data</h4>
+
                 <p className={styles.pTag}>
                     While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
-                <ul>
-                    <li>Usage Data</li>
-                </ul>
+                    <ul>
+                        <li>Usage Data</li>
+                    </ul>
 
                 </p>
+
                 <h4>Usage Data</h4>
                 <p className={styles.pTag}>
                     Usage Data is collected automatically when using the Service.
@@ -100,6 +102,7 @@ function Home({ data }) {
                     <br/><br/>
                     We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
                 </p>
+
                 <h3>Tracking Technologies and Cookies</h3>
                 <p className={styles.pTag}>
                     We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:
@@ -147,6 +150,7 @@ function Home({ data }) {
                     </ul>
                     For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.
                 </p>
+                
                 <h2>Use of Your Personal Data</h2>
                 <p className={styles.pTag}>
                     We may use Personal Data for the following purposes:

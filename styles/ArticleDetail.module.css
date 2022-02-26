@@ -167,14 +167,31 @@
 }
 .ArticleIntro{
 margin-top:20px;
+line-height: 25px;
+color:#3D7FBD;
+font-weight:normal;
+font-family:"Darker Grotesque";
+font-size:20px;
 }
 .ArticleDescription{
-
-}
-.ArticleDetailContent{
-    color:#ffffff;
+    margin-top:10px;
+    line-height: 20px;
+    color:#6493BF;
+    font-weight:normal;
     font-family:"Darker Grotesque";
     font-size:20px;
+    margin-bottom:30px;
+}
+.ArticleDetailContent{
+    
+    font-family:"Darker Grotesque";
+    font-size:20px;
+
+    color:silver;
+    font-weight:normal;
+    font-family:"Darker Grotesque";
+    font-size:20px;
+
 }
 .hCaption{
     font-family:"Cuprum";

@@ -109,7 +109,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
         <div className={styles.menuBigContainer}>
             <div className={styles.menuInnerContainer}>
                 <div className={styles.menuInnerContainerBigLeft}>
-                    <Link href="/home" >
+                    <Link href="/" >
                         <a className={styles.MenuLogoLink}>
                             
                             <img src="media/logo.svg" height="70%" />
