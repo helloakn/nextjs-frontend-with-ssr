@@ -222,7 +222,7 @@ const ArticleDetailElements=(props)=>{
            
             {articleDetails}
           </div> 
-          <div className="alignleft">
+          <div className="alignleft" id="divAdvertisement">
             <Script
               strategy="afterInteractive"
               dangerouslySetInnerHTML={{
@@ -240,13 +240,32 @@ const ArticleDetailElements=(props)=>{
               `,
               }}
             />
+            <Script
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+              __html: `
+              var oldDocumentWrite = document.write
+
+              // change document.write temporary
+              document.write = function(node){
+              // $("body").append(node)
+              // alert(node);
+              let _divAdvertisementHtml = document.getElementById('divAdvertisement').innerHTML;
+              document.getElementById('divAdvertisement').innerHTML = _divAdvertisementHtml + node;
+              }
+          `,
+          }}
+          />
             <Script 
               data-cfasync="false"  
               src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1" 
               strategy="afterInteractive"
               onLoad={() => {
-                  
-                      console.log('aws ad finished loading');
+                setTimeout(function() {
+                  document.write = oldDocumentWrite;
+                  console.log('aws ad finished loading');
+              }, 100)
+                      
               }}
             ></Script>
            
