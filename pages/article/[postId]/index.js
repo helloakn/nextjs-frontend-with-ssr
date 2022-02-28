@@ -216,16 +216,24 @@ const ArticleDetailElements=(props)=>{
           }}>
             
           </div> 
+          
           <div className={styles.ArticleDetailContent}>
            
             {articleDetails}
           </div> 
-
+          <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazondevices&banner=0GY8M1EV5PD90BQPR1R2&f=ifr&linkID=8c0748a23ac63d8444d6e889017b5649&t=wwwaungkyawny-20&tracking_id=wwwaungkyawny-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" 
+                style={{border:"none"}} frameborder="0"></iframe>
         </div>  
 
         <div className={styles.ArticleDetailBodyInnerRight}>
-        <h3 className={styles.hCaption}>Here is you may also like.</h3>
-        
+          <h3 className={styles.hCaption}>Here is you may also like.</h3>
+          <iframe 
+            src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=amazondevices&banner=0058897P3X0G4JA14R82&f=ifr&linkID=e6d5033b5a007baf89a7e2158a6e58ac&t=wwwaungkyawny-20&tracking_id=wwwaungkyawny-20" 
+            width="300" height="250" 
+            scrolling="no" 
+            border="0" 
+            marginwidth="0" 
+            style={{border:"none"}} frameborder="0"></iframe>
           {relatedArticles}
           <SquareAdsense currentPath="SquareAdsense" />
         </div>
