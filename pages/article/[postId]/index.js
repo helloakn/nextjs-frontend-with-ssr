@@ -223,8 +223,6 @@ const ArticleDetailElements=(props)=>{
             {articleDetails}
           </div> 
           <div className="alignleft" id="divAdvertisement">
-          <div id="ezoic-pub-ad-placeholder-102"> </div>
-           
           </div>
         </div>  
 

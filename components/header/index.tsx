@@ -59,8 +59,7 @@ export default function Header({...props }) {
             integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
             crossOrigin="anonymous"
             />
-        <script>var ezoicId = 331101; </script>
-        <script type="text/javascript" src="https://go.ezoic.net/ezoic/ezoic.js"></script>
+        
         <script 
             async 
             src={"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+publicRuntimeConfig.NEXT_PUBLIC_GAdsense_Client}
