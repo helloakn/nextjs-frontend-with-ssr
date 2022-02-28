@@ -236,6 +236,14 @@ const ArticleDetailElements=(props)=>{
             marginWidth="0" 
             style={{border:"none"}} frameBorder="0"></iframe>
           {relatedArticles}
+          <iframe 
+            src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=electronics&banner=1RJ5QAT5B55ECPXSXB82&f=ifr&linkID=a90725f312d07c8946205f9a77b22fe2&t=wwwaungkyawny-20&tracking_id=wwwaungkyawny-20" 
+            width="300" height="250" 
+            scrolling="no" 
+            border="0"
+            marginWidth="0" style={{border:"none"}} frameBorder="0">
+
+          </iframe>
           <SquareAdsense currentPath="SquareAdsense" />
         </div>
       </div>
