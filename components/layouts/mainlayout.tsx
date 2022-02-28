@@ -154,7 +154,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                     {children}
                 </div>
                 <div className={styles.AdsContainer}>
-                
+                <div id="ezoic-pub-ad-placeholder-101"> </div>
                 <HorizonalAdsense currentPath="HorizonalAdsense" />
                 </div>
             </div>
