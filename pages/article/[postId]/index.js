@@ -244,17 +244,17 @@ const ArticleDetailElements=(props)=>{
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
               __html: `
-              var oldDocumentWrite = document.write
+              // var oldDocumentWrite = document.write
 
-              // change document.write temporary
-              document.write = function(node){
-              // $("body").append(node)
-              // alert(node);
-              let _divAdvertisementHtml = document.getElementById('divAdvertisement').innerHTML;
-              console.log(_divAdvertisementHtml);
-              console.log(node);
-              document.getElementById('divAdvertisement').innerHTML = _divAdvertisementHtml + node;
-              }
+              // // change document.write temporary
+              // document.write = function(node){
+              // // $("body").append(node)
+              // // alert(node);
+              // let _divAdvertisementHtml = document.getElementById('divAdvertisement').innerHTML;
+              // console.log(_divAdvertisementHtml);
+              // console.log(node);
+              // document.getElementById('divAdvertisement').innerHTML = _divAdvertisementHtml + node;
+              // }
           `,
           }}
           />
