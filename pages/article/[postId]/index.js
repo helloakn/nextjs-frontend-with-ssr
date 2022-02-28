@@ -223,21 +223,7 @@ const ArticleDetailElements=(props)=>{
             {articleDetails}
           </div> 
           <div className="alignleft" id="divAdvertisement">
-          <div class="alignleft">
-          <script type="text/javascript">
-              amzn_assoc_ad_type = "banner";
-              amzn_assoc_marketplace = "amazon";
-              amzn_assoc_region = "US";
-              amzn_assoc_placement = "assoc_banner_placement_default";
-              amzn_assoc_campaigns = "amz_music";
-              amzn_assoc_banner_type = "category";
-              amzn_assoc_isresponsive = "true";
-              amzn_assoc_banner_id = "159S8R1P9HH8N29W4P82";
-              amzn_assoc_tracking_id = "wwwaungkyawny-20";
-              amzn_assoc_linkid = "35c9bdbc27adfc9b58531b37d9ea4ada";
-          </script>
-          <script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script>
-          </div>
+          <div id="ezoic-pub-ad-placeholder-102"> </div>
            
           </div>
         </div>  
