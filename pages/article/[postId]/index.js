@@ -223,53 +223,21 @@ const ArticleDetailElements=(props)=>{
             {articleDetails}
           </div> 
           <div className="alignleft" id="divAdvertisement">
-            <Script
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                  __html: `
-                  amzn_assoc_ad_type = "banner";
-                  amzn_assoc_marketplace = "amazon";
-                  amzn_assoc_region = "US";
-                  amzn_assoc_placement = "assoc_banner_placement_default";
-                  amzn_assoc_campaigns = "amz_music";
-                  amzn_assoc_banner_type = "category";
-                  amzn_assoc_isresponsive = "true";
-                  amzn_assoc_banner_id = "159S8R1P9HH8N29W4P82";
-                  amzn_assoc_tracking_id = "wwwaungkyawny-20";
-                  amzn_assoc_linkid = "c07e3a4df03eaef7238ce47c295e1c3f";
-              `,
-              }}
-            />
-            <Script
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-              __html: `
-              // var oldDocumentWrite = document.write
-
-              // // change document.write temporary
-              // document.write = function(node){
-              // // $("body").append(node)
-              // // alert(node);
-              // let _divAdvertisementHtml = document.getElementById('divAdvertisement').innerHTML;
-              // console.log(_divAdvertisementHtml);
-              // console.log(node);
-              // document.getElementById('divAdvertisement').innerHTML = _divAdvertisementHtml + node;
-              // }
-          `,
-          }}
-          />
-            <Script 
-              data-cfasync="false"  
-              src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1" 
-              strategy="afterInteractive"
-              onLoad={() => {
-                setTimeout(function() {
-                  //document.write = oldDocumentWrite;
-                  console.log('aws ad finished loading');
-              }, 100)
-                      
-              }}
-            ></Script>
+          <div class="alignleft">
+          <script type="text/javascript">
+              amzn_assoc_ad_type = "banner";
+              amzn_assoc_marketplace = "amazon";
+              amzn_assoc_region = "US";
+              amzn_assoc_placement = "assoc_banner_placement_default";
+              amzn_assoc_campaigns = "amz_music";
+              amzn_assoc_banner_type = "category";
+              amzn_assoc_isresponsive = "true";
+              amzn_assoc_banner_id = "159S8R1P9HH8N29W4P82";
+              amzn_assoc_tracking_id = "wwwaungkyawny-20";
+              amzn_assoc_linkid = "35c9bdbc27adfc9b58531b37d9ea4ada";
+          </script>
+          <script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script>
+          </div>
            
           </div>
         </div>  
