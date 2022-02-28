@@ -1,6 +1,7 @@
 //import type { NextPage } from 'next';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import Script from 'next/script'
 
 import Gist from "react-gist";
 
@@ -221,8 +222,35 @@ const ArticleDetailElements=(props)=>{
            
             {articleDetails}
           </div> 
-          <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazondevices&banner=0GY8M1EV5PD90BQPR1R2&f=ifr&linkID=8c0748a23ac63d8444d6e889017b5649&t=wwwaungkyawny-20&tracking_id=wwwaungkyawny-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" 
-                style={{border:"none"}} frameborder="0"></iframe>
+          <div className="alignleft">
+            <Script
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                  __html: `
+                  amzn_assoc_ad_type = "banner";
+                  amzn_assoc_marketplace = "amazon";
+                  amzn_assoc_region = "US";
+                  amzn_assoc_placement = "assoc_banner_placement_default";
+                  amzn_assoc_campaigns = "amz_music";
+                  amzn_assoc_banner_type = "category";
+                  amzn_assoc_isresponsive = "true";
+                  amzn_assoc_banner_id = "159S8R1P9HH8N29W4P82";
+                  amzn_assoc_tracking_id = "wwwaungkyawny-20";
+                  amzn_assoc_linkid = "c07e3a4df03eaef7238ce47c295e1c3f";
+              `,
+              }}
+            />
+            <Script 
+              data-cfasync="false"  
+              src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1" 
+              strategy="afterInteractive"
+              onLoad={() => {
+                  
+                      console.log('aws ad finished loading');
+              }}
+            ></Script>
+           
+          </div>
         </div>  
 
         <div className={styles.ArticleDetailBodyInnerRight}>
@@ -232,8 +260,8 @@ const ArticleDetailElements=(props)=>{
             width="300" height="250" 
             scrolling="no" 
             border="0" 
-            marginwidth="0" 
-            style={{border:"none"}} frameborder="0"></iframe>
+            marginWidth="0" 
+            style={{border:"none"}} frameBorder="0"></iframe>
           {relatedArticles}
           <SquareAdsense currentPath="SquareAdsense" />
         </div>
