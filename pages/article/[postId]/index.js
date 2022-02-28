@@ -251,6 +251,8 @@ const ArticleDetailElements=(props)=>{
               // $("body").append(node)
               // alert(node);
               let _divAdvertisementHtml = document.getElementById('divAdvertisement').innerHTML;
+              console.log(_divAdvertisementHtml);
+              console.log(node);
               document.getElementById('divAdvertisement').innerHTML = _divAdvertisementHtml + node;
               }
           `,
@@ -262,7 +264,7 @@ const ArticleDetailElements=(props)=>{
               strategy="afterInteractive"
               onLoad={() => {
                 setTimeout(function() {
-                  document.write = oldDocumentWrite;
+                  //document.write = oldDocumentWrite;
                   console.log('aws ad finished loading');
               }, 100)
                       
