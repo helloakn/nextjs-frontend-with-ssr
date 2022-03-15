@@ -205,14 +205,15 @@ font-size:20px;
     display:flex;
     flex-direction:row;
     background-color:#EAEBF0;
-    font-family:"ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace";
+    font-family:"system";
+    
     font-size:14px;
-    font-weight:bold;
-    color:#24292f;
+    color:#333;
     padding:10px;
     width:99% !important;
     border-radius:5px;
     margin-right:5px;
+
 }
 @media only screen and (max-width: 600px) {
     .ArticleDetailBodyInner{

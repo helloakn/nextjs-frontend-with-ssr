@@ -11,6 +11,8 @@ import NotFound from '../../../components/items/notfound';
 import RelatedArticle from '../../../components/items/relatedArticle';
 import styles from '../../../styles/ArticleDetail.module.css';
 
+import HorizonalAdsense from '../../../components/googleAdsense/HorizonalAdsense';
+
 import getConfig from 'next/config'
 const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
 
@@ -164,7 +166,7 @@ const ArticleDetailElements=(props)=>{
         head={
         <Header 
           title={article.title}
-          description={article.description}
+          description={article.meta_tag||article.intro}
           image={NEXT_PUBLIC_ImageDomain+article.image}
           url={NEXT_PUBLIC_AppDomain+"article/"+postId}
         />
@@ -179,7 +181,7 @@ const ArticleDetailElements=(props)=>{
 
         <div className={styles.ArticleDetailHeaderInnerRight}>
           <div className={styles.ArticleDetailHeaderInnerRightTitle}>
-            <h1 className="PageTitle"> {article.title}</h1>
+            <h1 className="PageTitle" alt={article.title} > {article.title}</h1>
           </div>
           <div className={styles.ArticleDetailHeaderInnerRightCategory}>
             {categories}
@@ -219,22 +221,20 @@ const ArticleDetailElements=(props)=>{
           </div> 
           
           <div className={styles.ArticleDetailContent}>
-           
             {articleDetails}
           </div> 
-          <div className="alignleft" id="divAdvertisement">
-          </div>
         </div>  
 
         <div className={styles.ArticleDetailBodyInnerRight}>
-          <h3 className={styles.hCaption}>Here is you may also like.</h3>
-          <iframe 
+        <iframe 
             src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=amazondevices&banner=0058897P3X0G4JA14R82&f=ifr&linkID=e6d5033b5a007baf89a7e2158a6e58ac&t=wwwaungkyawny-20&tracking_id=wwwaungkyawny-20" 
             width="300" height="250" 
             scrolling="no" 
             border="0" 
             marginWidth="0" 
-            style={{border:"none"}} frameBorder="0"></iframe>
+            style={{border:"none",marginTop:15}} frameBorder="0"></iframe>
+          <h3 className={styles.hCaption}>Here is you may also like.</h3>
+          
           {relatedArticles}
           <iframe 
             src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=electronics&banner=1RJ5QAT5B55ECPXSXB82&f=ifr&linkID=a90725f312d07c8946205f9a77b22fe2&t=wwwaungkyawny-20&tracking_id=wwwaungkyawny-20" 

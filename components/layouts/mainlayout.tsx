@@ -106,7 +106,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
         {/* END Small Menu */ }
 
         {/* Start Big Menu */ }
-        <div className={styles.menuBigContainer}>
+        <nav className={styles.menuBigContainer}>
             <div className={styles.menuInnerContainer}>
                 <div className={styles.menuInnerContainerBigLeft}>
                     <Link href="/" >
@@ -136,7 +136,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                     
                 </div>
             </div>
-        </div>
+        </nav>
 
         {/* End Big Menu */ }
 
@@ -154,9 +154,8 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                     {children}
                 </div>
                 <div className={styles.AdsContainer}>
-                <div id="ezoic-pub-ad-placeholder-101"> </div>
                 
-                <HorizonalAdsense currentPath="HorizonalAdsense" />
+                    <HorizonalAdsense currentPath="HorizonalAdsense" />
                 </div>
             </div>
             
