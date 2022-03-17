@@ -103,7 +103,7 @@ function Category({data}){
     </div>
     {/* End Header */}
     <div className="bodyAdvertisement">
-      <HorizonalAdsense currentPath="categoryPage" />      
+          
                     </div>
     {/* Start Body */}
     <div className={styles.CategoryBody}>

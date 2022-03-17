@@ -147,7 +147,7 @@ function Home({ data }) {
         </div>
         {/* END Banner */}
         <div className="bodyAdvertisement">
-                    <HorizonalAdsense currentPath="homePage" />
+                   
         </div>
         {/* Start AboutMe */}
         <div className={styles.bannerAboutMeContainer}>
@@ -185,13 +185,15 @@ function Home({ data }) {
         <div className={styles.divMainLatestArticles}>
           <div className={styles.divInnerLatestArticles}>
             <div className={styles.divTitleLatestArticles}>
-              Latest Article
+              6 Random Articles
             </div>
             {datas}
           </div>
         </div>
         {/* END Latest Articles */}
-
+        <div className="bodyAdvertisement">
+                   
+        </div>
         {/* Start Latest Articles */}
         <div className={styles.divMainLatestArticles}>
           <div className={styles.divInnerLatestArticles}>
