@@ -200,7 +200,9 @@ const ArticleDetailElements=(props)=>{
       </div>
     </div>
     {/* End Header */}
-
+    <div className="bodyAdvertisement">
+                    
+                    </div>
     {/* Start Body */}
     <div className={styles.ArticleDetailBody}>
       <div className={styles.ArticleDetailBodyInner}>
@@ -244,7 +246,7 @@ const ArticleDetailElements=(props)=>{
             marginWidth="0" style={{border:"none"}} frameBorder="0">
 
           </iframe>
-          <SquareAdsense currentPath="SquareAdsense" />
+          
         </div>
       </div>
     </div>

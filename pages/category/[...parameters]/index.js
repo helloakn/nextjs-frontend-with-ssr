@@ -101,7 +101,9 @@ function Category({data}){
       </div>
     </div>
     {/* End Header */}
-
+    <div className="bodyAdvertisement">
+                    
+                    </div>
     {/* Start Body */}
     <div className={styles.CategoryBody}>
       <div className={styles.CategoryBodyInner}>
@@ -109,6 +111,7 @@ function Category({data}){
       </div>
       
     </div>
+    
     <div className={styles.CategoryPaginationContainer}>
         <Pagination paginate={paginate} styles={styles} root={"/category/"+_categoryId} page_at={_pageAt} />
     </div>

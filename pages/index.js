@@ -137,6 +137,7 @@ function Home({ data }) {
               </div>
 
             </div>
+            
             {/* END Banner RIGHT */}
             <div className={styles.bannerContainerRight}>
               <img src="/media/akn.png" className={styles.imgAkn} height="100%"  alt="logo" />
@@ -144,7 +145,9 @@ function Home({ data }) {
           </div>
         </div>
         {/* END Banner */}
-
+        <div className="bodyAdvertisement">
+                    
+        </div>
         {/* Start AboutMe */}
         <div className={styles.bannerAboutMeContainer}>
           <div className={styles.bannerAboutMeInnerContainer}>

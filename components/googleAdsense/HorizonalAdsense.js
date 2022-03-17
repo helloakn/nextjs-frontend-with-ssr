@@ -19,7 +19,7 @@ return(
             data-ad-client={publicRuntimeConfig.NEXT_PUBLIC_GAdsense_Client}
             data-ad-slot="6293584643"
             data-ad-format="auto"
-            data-full-width-responsive="true"
+            data-full-width-responsive="false"
         >
         </ins>
        

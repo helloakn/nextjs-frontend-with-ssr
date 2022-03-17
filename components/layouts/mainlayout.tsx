@@ -150,12 +150,12 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
 
               {/* START Content */ }
             <div className={styles.mainBodyContainer}>
+                
                 <div className={styles.bodyInnerContainer}>
                     {children}
                 </div>
                 <div className={styles.AdsContainer}>
                 
-                    <HorizonalAdsense currentPath="HorizonalAdsense" />
                 </div>
             </div>
             
