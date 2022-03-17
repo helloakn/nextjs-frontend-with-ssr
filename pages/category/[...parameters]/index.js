@@ -13,6 +13,7 @@ import Article from '../../../components/items/article';
 import styles from '../../../styles/CategoryArticle.module.css';
 
 import Pagination from '../../../components/pagination';
+import HorizonalAdsense from '../../../components/googleAdsense/HorizonalAdsense';
 
 const NEXT_PUBLIC_ImageDomain = publicRuntimeConfig.NEXT_PUBLIC_ImageDomain;
 const NEXT_PUBLIC_AppDomain = publicRuntimeConfig.NEXT_PUBLIC_AppDomain;
@@ -102,7 +103,7 @@ function Category({data}){
     </div>
     {/* End Header */}
     <div className="bodyAdvertisement">
-                    
+      <HorizonalAdsense currentPath="categoryPage" />      
                     </div>
     {/* Start Body */}
     <div className={styles.CategoryBody}>

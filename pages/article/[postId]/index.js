@@ -201,7 +201,7 @@ const ArticleDetailElements=(props)=>{
     </div>
     {/* End Header */}
     <div className="bodyAdvertisement">
-                    
+    <HorizonalAdsense currentPath="articlePage1" />  
                     </div>
     {/* Start Body */}
     <div className={styles.ArticleDetailBody}>

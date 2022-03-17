@@ -7,6 +7,7 @@ import MainLayout from '../components/layouts/mainlayout'
 import Header from '../components/header';
 import Article from '../components/items/article';
 
+import HorizonalAdsense from '../components/googleAdsense/HorizonalAdsense';
 
 import styles from '../styles/Home.module.css';
 
@@ -146,7 +147,7 @@ function Home({ data }) {
         </div>
         {/* END Banner */}
         <div className="bodyAdvertisement">
-                    
+                    <HorizonalAdsense currentPath="homePage" />
         </div>
         {/* Start AboutMe */}
         <div className={styles.bannerAboutMeContainer}>
