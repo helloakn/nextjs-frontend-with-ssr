@@ -127,9 +127,6 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                     <Link href="/category/devops">
                         <a>DevOps</a>
                     </Link>
-                    <Link href="/category/docker">
-                        <a>Docker</a>
-                    </Link>
                     <Link href="/category/programming">
                         <a>Programming</a>
                     </Link>
