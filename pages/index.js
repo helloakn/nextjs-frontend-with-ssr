@@ -33,12 +33,21 @@ function Home({ data }) {
 
   let articleData = chunkArray(responseJson.latestArticles,3);
 
+  
   let datas = articleData.map((element,index)=>{
+      if(element.length % 3 == 1) element = element.concat([1,2]);
+      if(element.length % 3 == 2) element = element.concat([1]);  
       return (
           <div className={styles.divLatestArticlesContentContainer} key={"divLatestArticlesContentContainer"+index}>
               {
                   element.map((elm,i)=>{
-                      return (<Article  item={elm} key={"listiemsmall"+i} />)
+                      if( Number.isInteger(elm) ){
+                        return <div key={"empty"+elm} className="emptyContainer" ></div>
+                      }
+                      else{
+                        return (<Article  item={elm} key={"listiemsmall"+i} />)
+                      }
+                      
                   })
               }
           </div>
@@ -69,8 +78,8 @@ function Home({ data }) {
                 </div>
                 <div className={styles.bannerRowRight}>
                   <div className={styles.banerPosition}>
-                      Software Engineer, DevOps/DevSecOps Engineer,<br/>
-                      Cloud Solution Architect as a freelancer.<br/><br/>
+                      Software Engineer, DevOps Engineer,<br/>
+                      Cloud Solution Architect.<br/><br/>
                   </div>
                 </div>
               </div>
@@ -118,9 +127,7 @@ function Home({ data }) {
                   
                 </div>
                 <div className={styles.banerAddressDetail}>
-                  <Link href="https://d2y7r2fmr1u4v.cloudfront.net/cv/akn.pdf" >
-                      <a className={styles.btnDownloadCV}>Download CV</a>
-                  </Link>
+                  
                   <Link href="mailto:aungkyawnyunt2004@gmail.com">
                       <a className={styles.btnHireMe}>Contact Me</a>
                   </Link>
@@ -185,7 +192,7 @@ function Home({ data }) {
         <div className={styles.divMainLatestArticles}>
           <div className={styles.divInnerLatestArticles}>
             <div className={styles.divTitleLatestArticles}>
-              6 Random Articles
+              My Articles
             </div>
             {datas}
           </div>

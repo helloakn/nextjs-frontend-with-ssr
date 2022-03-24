@@ -277,3 +277,14 @@ a {
 .squardAds{
   width:300px;
 }
+
+
+.emptyContainer{
+  width:31%;
+}
+
+@media only screen and (max-width: 600px) {
+  .emptyContainer{
+      width:100%;
+  }
+}

@@ -75,11 +75,16 @@ function Category({data}){
   let articles = jsonResult.data.articles;
   let paginate = jsonResult.paginate;
 
-
+  if(articles.length % 3 == 1) articles = articles.concat([1,2]);
+  if(articles.length % 3 == 2) articles = articles.concat([1]); 
   let articlesData = articles.map((element,index)=>{
-      return (
-            <Article css="marginTop20px" item={element} key={"listiemsmall"+index} />
-          );
+    if( Number.isInteger(element) ){
+      return <div key={"empty"+element} className="emptyContainer" ></div>
+    }
+    else{
+      return <Article css="marginTop20px" item={element} key={"listiemsmall"+index} />
+    }
+    
   });
 
 
