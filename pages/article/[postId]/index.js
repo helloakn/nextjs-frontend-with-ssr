@@ -49,6 +49,14 @@ const ArticleDetailElements=(props)=>{
  //console.log('ArticleDetailElements');
  //console.log(_element);
 // console.log(_key);
+ function replaceHtml(_html){
+   const tabRegex = /    /i;
+   let tmpHtml = _html.replace(tabRegex,"&nbsp;&nbsp;&nbsp;");
+   const spaceRegex = / /i;
+   tmpHtml = tmpHtml.replace(spaceRegex,"&nbsp;");
+   return "<code>"+tmpHtml+"</code>";
+ }
+ console.log(_element.value);
   switch(_element.type){
       case '1': // image
           return (
@@ -75,7 +83,7 @@ const ArticleDetailElements=(props)=>{
                     <div className="hCaption marginTop5px">{_element.title}</div>
                     <div className="marginBottom5px marginTop5px" >{_element.before_description}</div>
                     <div className={styles.DivCode} dangerouslySetInnerHTML={{
-                          __html: _element.value
+                          __html: replaceHtml(_element.value)
                       }} >
                       </div>
                     <div>{_element.after_description}</div>

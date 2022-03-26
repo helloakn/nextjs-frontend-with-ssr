@@ -164,11 +164,15 @@ function Home({ data }) {
               About Me
             </div>
             <div className={styles.AboutMeDetail}>
-              I'm a Software Engineer, DevOps Engineer, Cloud Solution Architect as a freelancer.<br/> 
-              AWS Cloud Services and a background as above Project Management with over 5 years of intensive work experience in an Agile environment and worked the Senior  Engineer level with over 10 yers.<br/>
-              Before my journey of freelance,<br/>
-              I worked in Zote By Focus Innovation as Chief Technology Office position.
-              In my free time, I write article for my www.aungkyawnyunt.com.
+            I am Software Engineer from Myanmar with the 15 years of intensive work experience in IT Fields and who has always been interested in the new technologies. <br/>
+I have over 7 solid years of experience in Project Management and background as Backend Engineer.<br/><br/>
+
+I can deliver high quality work for either small nor huge.<br/><br/>
+I would be glad to offer you my creative services for:<br/>
+ ~ Backend Engineer ( PHP, NodeJs, Python )<br/>
+ ~ Frontend Engineer. ( NextJs, ReactJs )<br/>
+ ~ Mobile Application Developer ( ReactNative)<br/>
+ ~ Cloud Solution Architect ( AWS )
             </div>
 
             <div className={styles.AboutMeTitle}>
