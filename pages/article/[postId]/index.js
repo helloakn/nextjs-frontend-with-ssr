@@ -50,13 +50,31 @@ const ArticleDetailElements=(props)=>{
  //console.log(_element);
 // console.log(_key);
  function replaceHtml(_html){
-   const tabRegex = /    /i;
-   let tmpHtml = _html.replace(tabRegex,"&nbsp;&nbsp;&nbsp;");
-   const spaceRegex = / /i;
-   tmpHtml = tmpHtml.replace(spaceRegex,"&nbsp;");
-   return "<code>"+tmpHtml+"</code>";
+  const _colorFunction = "#4a3c60";
+  const _colorEqual = "#234fb9";
+  
+  
+  let finalHtml = '';
+  var lines = _html.split('\n');
+  for(var i = 0;i < lines.length;i++){
+    let tmpLine = lines[i];
+    tmpLine = tmpLine.replaceAll('= ','<span style="color:'+_colorEqual+'">= </span>');
+    tmpLine = tmpLine.replaceAll('(','<span style="color:'+_colorEqual+'">(</span>');
+    tmpLine = tmpLine.replaceAll(')','<span style="color:'+_colorEqual+'">)</span>');
+    tmpLine = tmpLine.replaceAll('{','<span style="color:'+_colorEqual+'">{</span>');
+    tmpLine = tmpLine.replaceAll('}','<span style="color:'+_colorEqual+'">}</span>');
+    tmpLine = tmpLine.replaceAll(';','<span style="color:'+_colorEqual+'">;</span>');
+    tmpLine = tmpLine.replaceAll('=>','<span style="color:'+_colorEqual+'">=></span>');
+    finalHtml += '<span style="color:'+_colorFunction+';">'+tmpLine+'</span>';
+  }
+
+  const tabRegex = /    /i;
+  let tmpHtml = finalHtml.replace(tabRegex,"&nbsp;&nbsp;&nbsp;");
+  const spaceRegex = / /i;
+  tmpHtml = tmpHtml.replace(spaceRegex,"&nbsp;");
+  
+  return "<code>"+finalHtml+"</code>";
  }
- console.log(_element.value);
   switch(_element.type){
       case '1': // image
           return (
