@@ -1,4 +1,3 @@
-//import type { NextPage } from 'next'
 import Link from 'next/link'
 import getConfig from 'next/config'
 const { serverRuntimeConfig,publicRuntimeConfig } = getConfig()
@@ -33,10 +32,10 @@ function Home({ data }) {
 
   let articleData = chunkArray(responseJson.latestArticles,3);
 
-  
+
   let datas = articleData.map((element,index)=>{
       if(element.length % 3 == 1) element = element.concat([1,2]);
-      if(element.length % 3 == 2) element = element.concat([1]);  
+      if(element.length % 3 == 2) element = element.concat([1]);
       return (
           <div className={styles.divLatestArticlesContentContainer} key={"divLatestArticlesContentContainer"+index}>
               {
@@ -47,7 +46,7 @@ function Home({ data }) {
                       else{
                         return (<Article  item={elm} key={"listiemsmall"+i} />)
                       }
-                      
+
                   })
               }
           </div>
@@ -99,7 +98,7 @@ function Home({ data }) {
                     <i  className="fas fa-mail-bulk" />
                 </div>
                 <div className={styles.banerAddressDetail}>
-                akn.cloud86@gmail.com
+                aungkyawnyunt2004@gmail.com
                 </div>
               </div>
 
@@ -124,20 +123,20 @@ function Home({ data }) {
 
               <div className={styles.bannerDivButtons}>
                 <div className={styles.bannerRowLeft}>
-                  
+
                 </div>
                 <div className={styles.banerAddressDetail}>
-                  
+
                   <Link href="mailto:aungkyawnyunt2004@gmail.com">
                       <a className={styles.btnHireMe}>Contact Me</a>
                   </Link>
                 </div>
               </div>
 
-              
+
               <div className={styles.bannerDivAddress}>
                 <div className={styles.bannerRowIcon}>
-                  
+
                 </div>
                 <div className={styles.banerAddressDetail}>
                 <br/> My attitude is to deliver high quality work by honest for either small or huge.
@@ -145,7 +144,7 @@ function Home({ data }) {
               </div>
 
             </div>
-            
+
             {/* END Banner RIGHT */}
             <div className={styles.bannerContainerRight}>
               <img src="/media/akn.png" className={styles.imgAkn} height="100%"  alt="logo" />
@@ -154,7 +153,7 @@ function Home({ data }) {
         </div>
         {/* END Banner */}
         <div className="bodyAdvertisement">
-                   
+
         </div>
         {/* Start AboutMe */}
         <div className={styles.bannerAboutMeContainer}>
@@ -164,13 +163,15 @@ function Home({ data }) {
               About Me
             </div>
             <div className={styles.AboutMeDetail}>
-            I am Software Engineer from Myanmar with over 10 years of intensive work experience in IT Fields. <br/> I have over 6 solid years of experience in Project Management and background as FullStack Engineer. 
-I can deliver high quality work for either small nor huge. <br/>
-I would be glad to offer you my creative services for: <br/>
- ~ Backend Engineer ( NodeJs )<br/>
+            I am Software Engineer from Myanmar with the 15 years of intensive work experience in IT Fields and who has always been interested in the new technologies. <br/>
+I have over 7 solid years of experience in Project Management and background as Backend Engineer.<br/><br/>
+
+I can deliver high quality work for either small nor huge.<br/><br/>
+I would be glad to offer you my creative services for:<br/>
+ ~ Backend Engineer ( PHP, NodeJs, Python )<br/>
  ~ Frontend Engineer. ( NextJs, ReactJs )<br/>
  ~ Mobile Application Developer ( ReactNative)<br/>
- ~ Cloud Solution Architect ( AWS )<br/>
+ ~ Cloud Solution Architect ( AWS )
             </div>
 
             <div className={styles.AboutMeTitle}>
@@ -187,7 +188,7 @@ I would be glad to offer you my creative services for: <br/>
             </div>
 
           </div>
-        
+        </div>
         {/* END AboutMe */}
 
         {/* Start Latest Articles */}
@@ -201,18 +202,18 @@ I would be glad to offer you my creative services for: <br/>
         </div>
         {/* END Latest Articles */}
         <div className="bodyAdvertisement">
-                   
+
         </div>
         {/* Start Latest Articles */}
         <div className={styles.divMainLatestArticles}>
           <div className={styles.divInnerLatestArticles}>
             <div className={styles.divTitleLatestArticles}>
-              
+
             </div>
           </div>
         </div>
         {/* END Latest Articles */}
-       
+
     </MainLayout>
   )
 }
