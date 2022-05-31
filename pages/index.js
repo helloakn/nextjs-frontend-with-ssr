@@ -99,7 +99,7 @@ function Home({ data }) {
                     <i  className="fas fa-mail-bulk" />
                 </div>
                 <div className={styles.banerAddressDetail}>
-                aungkyawnyunt2004@gmail.com
+                akn.cloud86@gmail.com
                 </div>
               </div>
 
@@ -164,15 +164,13 @@ function Home({ data }) {
               About Me
             </div>
             <div className={styles.AboutMeDetail}>
-            I am Software Engineer from Myanmar with the 15 years of intensive work experience in IT Fields and who has always been interested in the new technologies. <br/>
-I have over 7 solid years of experience in Project Management and background as Backend Engineer.<br/><br/>
-
-I can deliver high quality work for either small nor huge.<br/><br/>
-I would be glad to offer you my creative services for:<br/>
- ~ Backend Engineer ( PHP, NodeJs, Python )<br/>
- ~ Frontend Engineer. ( NextJs, ReactJs )<br/>
- ~ Mobile Application Developer ( ReactNative)<br/>
- ~ Cloud Solution Architect ( AWS )
+            I am Software Engineer from Myanmar with over 10 years of intensive work experience in IT Fields. </br> I have over 6 solid years of experience in Project Management and background as FullStack Engineer. 
+I can deliver high quality work for either small nor huge. </br>
+I would be glad to offer you my creative services for: </br>
+ ~ Backend Engineer ( NodeJs )</br>
+ ~ Frontend Engineer. ( NextJs, ReactJs )</br>
+ ~ Mobile Application Developer ( ReactNative)</br>
+ ~ Cloud Solution Architect ( AWS )</br>
             </div>
 
             <div className={styles.AboutMeTitle}>
