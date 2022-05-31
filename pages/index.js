@@ -165,12 +165,12 @@ function Home({ data }) {
             </div>
             <div className={styles.AboutMeDetail}>
             I am Software Engineer from Myanmar with over 10 years of intensive work experience in IT Fields. </br> I have over 6 solid years of experience in Project Management and background as FullStack Engineer. 
-I can deliver high quality work for either small nor huge. </br>
-I would be glad to offer you my creative services for: </br>
- ~ Backend Engineer ( NodeJs )</br>
- ~ Frontend Engineer. ( NextJs, ReactJs )</br>
- ~ Mobile Application Developer ( ReactNative)</br>
- ~ Cloud Solution Architect ( AWS )</br>
+I can deliver high quality work for either small nor huge. <br/>
+I would be glad to offer you my creative services for: <br/>
+ ~ Backend Engineer ( NodeJs )<br/>
+ ~ Frontend Engineer. ( NextJs, ReactJs )<br/>
+ ~ Mobile Application Developer ( ReactNative)<br/>
+ ~ Cloud Solution Architect ( AWS )<br/>
             </div>
 
             <div className={styles.AboutMeTitle}>
@@ -187,7 +187,7 @@ I would be glad to offer you my creative services for: </br>
             </div>
 
           </div>
-        </div>
+        
         {/* END AboutMe */}
 
         {/* Start Latest Articles */}
