@@ -168,7 +168,7 @@ function Home({ data }) {
 
 I can deliver high quality work for either small nor huge.<br/><br/>
 I would be glad to offer you my creative services for:<br/>
- ~ Backend Engineer (NodeJs, PHP, Python )<br/>
+ ~ Backend Engineer ( NodeJs, PHP, Python )<br/>
  ~ Frontend Engineer. ( ReactJs, NextJs )<br/>
  ~ Mobile Application Developer ( ReactNative)<br/>
  ~ Cloud Solution Architect ( AWS )
