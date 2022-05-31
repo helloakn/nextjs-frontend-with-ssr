@@ -98,7 +98,7 @@ function Home({ data }) {
                     <i  className="fas fa-mail-bulk" />
                 </div>
                 <div className={styles.banerAddressDetail}>
-                aungkyawnyunt2004@gmail.com
+                akn.cloud86@gmail.com
                 </div>
               </div>
 
@@ -127,7 +127,7 @@ function Home({ data }) {
                 </div>
                 <div className={styles.banerAddressDetail}>
 
-                  <Link href="mailto:aungkyawnyunt2004@gmail.com">
+                  <Link href="mailto:akn.cloud86@gmail.com">
                       <a className={styles.btnHireMe}>Contact Me</a>
                   </Link>
                 </div>
