@@ -144,7 +144,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
 {/* END Header */ }
 
 
-
+<HorizonalAdsense />
               {/* START Content */ }
             <div className={styles.mainBodyContainer}>
                 
