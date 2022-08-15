@@ -229,6 +229,9 @@ const ArticleDetailElements=(props)=>{
     <div className="bodyAdvertisement">
     
                     </div>
+<div>
+      <HorizonalAdsense/>
+</div>
     {/* Start Body */}
     <div className={styles.ArticleDetailBody}>
       <div className={styles.ArticleDetailBodyInner}>
