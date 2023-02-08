@@ -89,7 +89,7 @@ function Home({ data }) {
                     <i  className="fas fa-mobile-alt" />
                 </div>
                 <div className={styles.banerAddressDetail}>
-                +95 9763764572
+                +66 660609210
                 </div>
               </div>
 
@@ -107,7 +107,7 @@ function Home({ data }) {
                     <i  className="fas fa-map-marker-alt" />
                 </div>
                 <div className={styles.banerAddressDetail}>
-                  No(26), Than Lan Street, Hlaing Township,Yangon City, Myanmar.
+                  Chonburi, Thailand
                 </div>
               </div>
 

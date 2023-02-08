@@ -190,7 +190,7 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                                 </Link>
                             </div>
                             <div className={styles.footerRow}>
-                                <Link href="https://www.linkedin.com/in/aung-kyaw-nyunt-02755313a">
+                                <Link href="https://github.com/helloakn">
                                     <a>GitHub</a>
                                 </Link>
                             </div>
@@ -202,11 +202,11 @@ export default function MainLayout({ children, ...props }:IMainLayout) {
                         <div className={styles.footerParagraph}>
                             <div className={styles.footerRow}>
                                 <i className="fas fa-mobile-alt"></i>
-                                <label className={styles.footerLabel}>+95 9763764572</label>
+                                <label className={styles.footerLabel}>+66 660609210</label>
                             </div>
                             <div className={styles.footerRow}>
                                 <i className="fas fa-mail-bulk"></i>
-                                <label className={styles.footerLabel}>aungkyawnyunt2004@gmail.com</label>
+                                <label className={styles.footerLabel}>akn.cloud86@gmail.com</label>
                             </div>
                             <div className={styles.footerRow}>
                                 <i className="fas fa-dice-d20"></i>
